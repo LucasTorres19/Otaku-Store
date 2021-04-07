@@ -9,8 +9,7 @@ export default class cabezera extends Component{
         const styles ={
 
             icon:{
-                width:"50px",
-                 
+                width:"50px"
             },
             div:{
                 width:"100%",
@@ -31,13 +30,13 @@ export default class cabezera extends Component{
 
             <React.Fragment>
                 <div  style={styles.div} id='header'>
-                    <img  style={styles.icon} id='icon' src="/logo_mqm.png" />
+                    <img  style={styles.icon} id='icon' src="/logo_mqm.png" alt="icon"/>
                     <div>
                         <Form.Control type="text" placeholder="Buscar Productos" size='lg' />                    
                     </div>
                     <div>
-                        <img style={styles.iconhd} src='/cart-plus-solid.svg'></img>
-                        <img style={styles.iconhd} src='/user-solid.svg'></img>
+                        <img style={styles.iconhd} src='/cart-plus-solid.svg' alt="icon"></img>
+                        <img style={styles.iconhd} src='/user-solid.svg' alt="icon" ></img>
                     </div>
                 </div>
             </React.Fragment>
