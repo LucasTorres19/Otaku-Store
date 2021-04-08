@@ -28,8 +28,7 @@ render(){
        <React.Fragment>
    <div style={styles.footer}>
        
-       <h4 style={styles.h1}>7º4 - Diseñado por: Britez Leandro - Brandan Carlos - Torres Lucas</h4>
-       <h4>2021</h4>
+       <h4 style={styles.h1}>7º4 - Diseñado por: Britez Leandro - Brandan Carlos - Torres Lucas - 2021</h4> 
    </div>
      </React.Fragment>
    )

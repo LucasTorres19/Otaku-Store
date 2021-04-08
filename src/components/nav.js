@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
 import Dropdown from "./dropdown.js";
 
+
 export default class Nav extends Component{
 
     // Agregar dropdowns
@@ -36,28 +37,33 @@ export default class Nav extends Component{
         
         const style = {
             nav:{
-                backgroundColor:"red",
+                backgroundColor:"#ff4747",
                 fontFamily:"Arial",
                 color:"white",
                 display:"flex",
                 justifyContent:"center",
+                flexDirection: "row",
                 width: "100%",
-                height:"4rem",
+                height:"5rem",
                 },
-            drop:{
-                padding:"30px"
-            }
-
+            contenedor:{
+                marginTop:"11px",
+                display:"flex",
+                flexDirection: "row",
+            },
+            
         }
         
         return(
             <React.Fragment>
                 <nav style={style.nav}>
-                        <Dropdown style={style.drop} title="Manga" items={this.state.manga}/>
+                    <div style={style.contenedor}>
+                        <Dropdown  style={style.drop} title="Manga" items={this.state.manga}/>
                         <Dropdown style={style.drop} title="Juegos" items={this.state.Juegos}/>
                         <Dropdown style={style.drop} title="Libros" items={this.state.Libros}/>
                         <Dropdown style={style.drop} title="Figuras" items={this.state.Figuras}/>
                        <Dropdown style={style.drop} title="Hardware" items={this.state.Hardware}/>
+                    </div>
                 </nav>
             </React.Fragment>
 

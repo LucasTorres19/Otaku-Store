@@ -33,7 +33,7 @@ export default class dropdown extends Component{
                     <SplitButton
                     menuAlign={{ lg: 'left' }}
                     title={this.props.title}
-                    id={this.props.title}
+                    id={this.props.title}                  
                     >
                     {this.Crear(this.props.items)}  
                     </SplitButton>
