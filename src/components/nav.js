@@ -9,24 +9,29 @@ export default class Nav extends Component{
     constructor(props){
         super(props)
         this.state = {
-            manga:{
-                Fila1:"Manhua",Fila2:"ECCHI",Fila3:"JOSEI",Fila4:"NOVELAS LIGERAS",Fila5:"SEINEN",
-                Fila6:"SHOJO",Fila7:"SHONEN",Fila8:"SPOKON",Fila9:"YAOI / BL",Fila10:"YURI",             
+            manga:
+            {
+                Fila1:"Manhua",Fila2:"Ecchi",Fila3:"Josei",Fila4:"Novelas Ligeras",Fila5:"Seinen",
+                Fila6:"Shojo",Fila7:"Shonen",Fila8:"Spokon",Fila9:"Yaoi / BL",Fila10:"Yuri",             
             },
-            Juegos:{
-                Fila1:"TROK", Fila2:"YU-GI-OH!",Fila3:"POKEMON",Fila4:"ACCESORIOS",
-                Fila5:"MAGIC THE GATHERING",Fila6:"JUEGOS DE MESA",Fila7:"JUEGOS DIGITALES",                             
+            Juegos:
+            {
+                Fila1:"Trok", Fila2:"YU-GI-OH!",Fila3:"Pokemon",Fila4:"Accesorios",
+                Fila5:"MAGIC THE GATHERING",Fila6:"Juegos de Mesa",Fila7:"Juegos Digitales",                             
             },
-            Libros:{
-                Fila1:"CINE",Fila2:"DIBUJO",Fila3:"JOVENES LECTORES",Fila4:"ARTBOOKS",               
+            Libros:
+            {
+                Fila1:"Cine",Fila2:"Dibujo",Fila3:"Jovenes Lectores",Fila4:"Artbooks",               
             },
-            Figuras:{
-                Fila1:"PELUCHES",Fila2:"MCFARLANE",Fila3:"OOSHIES",Fila4:"SPINMASTER",
-                Fila5:"ANIME",Fila6:"FUNKOS POP",
+            Figuras:
+            {
+                Fila1:"Peluches",Fila2:"Mcfarlane",Fila3:"Ooshies",Fila4:"Spinmaster",
+                Fila5:"Anime",Fila6:"FUNKOS POP",
             },
-            Hardware:{
-                Fila1:"MOTHERBOARD",Fila2:"PROCESADORES", Fila3:"MEMORIAS RAM", Fila4:"ALMACENAMIENTO",
-                Fila5:"PLACAS DE VIDEO",Fila6:"GABINETES Y FUENTES", Fila7:"PERIFERICOS",Fila8:"EQUIPOS Y NOTEBOOKS",Fila9:"CABLES",
+            Hardware:
+            {
+                Fila1:"Motherboard",Fila2:"Procesadores", Fila3:"Memorias Ram", Fila4:"Almacenamiento",
+                Fila5:"Placas de Video",Fila6:"Gabinentes y Fuentes", Fila7:"Perifericos",Fila8:"Equipos y Notebooks",Fila9:"Cables",
                 
             }
    
@@ -37,22 +42,24 @@ export default class Nav extends Component{
         
         const style = {
             nav:{
-                backgroundColor:"#ff4747",
+                backgroundColor:"#e51b22",
                 fontFamily:"Arial",
                 color:"white",
                 display:"flex",
                 justifyContent:"center",
                 flexDirection: "row",
-                width: "100%",
                 height:"5rem",
+
                 },
-            contenedor:{
+            contenedor: {
                 marginTop:"11px",
                 display:"flex",
                 flexDirection: "row",
-            },
+                
             
-        }
+                        },
+            
+                    }
         
         return(
             <React.Fragment>
