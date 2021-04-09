@@ -13,7 +13,7 @@ render(){
         width: "100%",
         textAlign:"center",
         alignItems:"center",
-        position: "fixed",
+        position: "relative",
         color: "white",
         backgroundColor:"#636363",
         fontFamily:"Arial",
