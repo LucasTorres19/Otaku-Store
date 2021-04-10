@@ -12,19 +12,21 @@ export default class dropdown extends Component{
     Crear(aux){
 
         //<Dropdown.Item eventKey="1">Action 1</Dropdown.Item>
+       
+            const array = Object.values(aux)
+            
+            let items = []
+            
+            for (let index = 0; index < array.length; index++) {
 
-        const array = Object.values(aux)
+            
+            items[index] = <Dropdown.Item key={index}eventKey={index}>{array[index]}</Dropdown.Item>               
+            
+            }
+            return(items)
         
-        let items = []
-        
-        for (let index = 0; index < array.length; index++) {
-
-        
-         items[index] = <Dropdown.Item key={index}eventKey={index}>{array[index]}</Dropdown.Item>               
-        
-        }
-        return(items)
-    }
+  
+}
 
     render(){
         return(

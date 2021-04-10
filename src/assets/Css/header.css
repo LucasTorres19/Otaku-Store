@@ -1,0 +1,34 @@
+.icon{
+    width:57px;
+}
+.div{
+    width:100%;
+    display:flex;
+    justify-Content:space-between;
+    align-Items:center;      
+}
+.iconhd{
+    width:30px;
+    height:30px;
+    margin-Right:20px;
+}
+  .flex-row{
+    display: flex;
+    flex-direction: row-reverse !important;
+  }
+  .search{
+    align-self: center;
+    position:absolute;
+    padding-right:8px;
+  }
+
+@media screen and (max-width: 640px) {
+    .iconos{
+        display: flex;
+        margin-left: 15px;
+    }
+    .icon{
+        width: 57px;
+        margin-right: 10px;
+    }
+  } 

@@ -1,0 +1,21 @@
+.carousel{
+    margin-Top:1%;
+    margin-Left:10%;
+    margin-Right:10%;
+    margin-bottom: 1%;
+    width:80%
+}
+.images{
+    height: 382px;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .carousel{
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 2%;
+        width: 100%;
+
+    }
+  } 

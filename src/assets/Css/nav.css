@@ -1,0 +1,39 @@
+nav{
+    background-Color:#e51b22;
+    font-Family:Arial;
+    color:white;
+    display:flex;
+    justify-Content:center;
+    flex-grow: row;
+    height:5rem;
+    width:100%;
+   
+}
+
+.contenedor{
+    margin-bottom: 10px;
+    display:flex;
+    flex-Direction:row;
+    width:100%;
+    justify-Content:right;
+    align-items: center;
+  } 
+
+ @media screen and (max-width: 700px) {
+    nav{
+        background-Color:#e51b22;
+        font-Family:Arial;
+        color:white;
+        display:flex;
+        justify-Content:center;
+        flex-grow: column;
+        height:auto;
+        width:100%;
+       
+    }
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+  } 

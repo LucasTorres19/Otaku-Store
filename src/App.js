@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/app.scss';
-
 //Components
 import Cabeza from './components/cabezera.js';
 import Footer from "./components/footer.js";
@@ -13,7 +12,20 @@ function App() {
     <Cabeza />
     <Nav />
     <Carrusel />
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
     <Footer />      
   </div>
   );

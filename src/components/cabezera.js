@@ -1,42 +1,24 @@
 import React,{Component} from 'react'
 import {Form} from  'react-bootstrap';
+import "./../assets/Css/header.css";
 
 export default class cabezera extends Component{
 
 
     render(){
 
-        const styles ={
-
-            icon:{
-                width:"57px"
-            },
-            div:{
-                width:"100%",
-                display:"flex",
-                justifyContent:"space-between",
-                alignItems:"center",      
-            },
-            iconhd:{
-                width:"30px",
-                height:"30px",
-                marginRight:"20px",
-            },
-            
-        }
-
-        
         return(
 
             <React.Fragment>
-                <div  style={styles.div} id='header'>
-                    <img  style={styles.icon} id='icon' src="/logo_mqm.png" alt="icon"/>
-                    <div>
-                        <Form.Control type="text" placeholder="Buscar Productos" size='lg' />                    
+                <div className="div" id='header'>
+                    <img className="icon" id='icon' src="./icons/logo_mqm.png" alt="icon"/>
+                    <div className="flex-row">
+                        <Form.Control type="text"  placeholder="Buscar..." size='lg' />  
+                        <img src="./icons/search_black_24dp.svg" className="search"/>
                     </div>
-                    <div>
-                        <img style={styles.iconhd} src='/cart-plus-solid.svg' alt="icon"></img>
-                        <img style={styles.iconhd} src='/user-solid.svg' alt="icon" ></img>
+                    <div className="iconos">
+                        <img className="iconhd" src="./icons/cart-plus-solid.svg" alt="icon"></img>
+                        <img className="iconhd" src="./icons/user-solid.svg" alt="icon" ></img>
                     </div>
                 </div>
             </React.Fragment>

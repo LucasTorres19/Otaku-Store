@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 import Dropdown from "./dropdown.js";
-
+import "./../assets/Css/nav.css";
 
 export default class Nav extends Component{
 
@@ -33,45 +33,33 @@ export default class Nav extends Component{
                 Fila1:"Motherboard",Fila2:"Procesadores", Fila3:"Memorias Ram", Fila4:"Almacenamiento",
                 Fila5:"Placas de Video",Fila6:"Gabinentes y Fuentes", Fila7:"Perifericos",Fila8:"Equipos y Notebooks",Fila9:"Cables",
                 
-            }
-   
-        }    
+            },
+        }
+        this.CrearNav = this.CrearNav.bind(this)
     } 
+
+    CrearNav(){
+
+            return(
+                <React.Fragment>
+                <nav>
+                    <div className="contenedor">
+                        <Dropdown   title="Manga" items={this.state.manga}/>
+                        <Dropdown  title="Juegos" items={this.state.Juegos}/>
+                        <Dropdown  title="Libros" items={this.state.Libros}/>
+                        <Dropdown  title="Figuras" items={this.state.Figuras}/>
+                        <Dropdown  title="Hardware" items={this.state.Hardware}/>
+                    </div>
+                </nav>
+                </React.Fragment>
+            )
+    }
     
     render(){
         
-        const style = {
-            nav:{
-                backgroundColor:"#e51b22",
-                fontFamily:"Arial",
-                color:"white",
-                display:"flex",
-                justifyContent:"center",
-                flexDirection: "row",
-                height:"5rem",
-
-                },
-            contenedor: {
-                marginTop:"11px",
-                display:"flex",
-                flexDirection: "row",
-                
-            
-                        },
-            
-                    }
-        
         return(
-            <React.Fragment>
-                <nav style={style.nav}>
-                    <div style={style.contenedor}>
-                        <Dropdown  style={style.drop} title="Manga" items={this.state.manga}/>
-                        <Dropdown style={style.drop} title="Juegos" items={this.state.Juegos}/>
-                        <Dropdown style={style.drop} title="Libros" items={this.state.Libros}/>
-                        <Dropdown style={style.drop} title="Figuras" items={this.state.Figuras}/>
-                       <Dropdown style={style.drop} title="Hardware" items={this.state.Hardware}/>
-                    </div>
-                </nav>
+            <React.Fragment>         
+               {this.CrearNav()}   
             </React.Fragment>
 
         );
