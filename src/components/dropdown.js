@@ -20,7 +20,7 @@ export default class dropdown extends Component{
         for (let index = 0; index < array.length; index++) {
 
         
-         items[index] = <Dropdown.Item eventKey={index}>{array[index]}</Dropdown.Item>               
+         items[index] = <Dropdown.Item key={index}eventKey={index}>{array[index]}</Dropdown.Item>               
         
         }
         return(items)

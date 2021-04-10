@@ -9,7 +9,7 @@ export default class cabezera extends Component{
         const styles ={
 
             icon:{
-                width:"50px"
+                width:"57px"
             },
             div:{
                 width:"100%",

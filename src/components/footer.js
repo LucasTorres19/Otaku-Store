@@ -17,8 +17,9 @@ render(){
         color: "white",
         backgroundColor:"#636363",
         fontFamily:"Arial",
-        height:"6rem",        
-        
+        height:"6rem",  
+        paddingBottom:"5px"
+
       },
       h1:
       {
@@ -76,7 +77,7 @@ render(){
         <footer style={styles.footer}>
           <div style={styles.div}>
               <div style={styles.divlogo}>
-                <img style={styles.logo}src="https://www.eest5lanus.edu.ar/imgs/logo1.png"/>       
+                <img style={styles.logo}src="https://www.eest5lanus.edu.ar/imgs/logo1.png" alt="Kennedy"/>       
                 <h5 style={styles.division}>7°4</h5>
               </div>
               <div style={styles.copy}>
