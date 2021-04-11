@@ -15,7 +15,7 @@ nav{
     display:flex;
     flex-Direction:row;
     width:100%;
-    justify-Content:right;
+    justify-Content:space-evenly;
     align-items: center;
   } 
 
