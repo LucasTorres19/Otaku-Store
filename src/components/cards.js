@@ -45,7 +45,7 @@ render(){
     return(
     <React.Fragment>
 
-        <Card style={{ width: '14rem' ,display:"inline-block",height:"312px"}} >
+        <Card style={{ width: '14rem',display:"inline-block",height:"312px"}} >
         <Card.Img variant="top" style={style.image} src={this.props.link} />
         
         <Card.Body style={{height:"162px",minHeight:"162px"}}>
@@ -54,7 +54,7 @@ render(){
             <Card.Title  style={style.precio}>{this.props.precio}</Card.Title>
             <div style={style.botones}>
                 <Button variant="primary">Comprar</Button>
-                <Button variant="dark"><img src="./icons/visibility_white_24dp.svg"/>Ver</Button>
+                <Button variant="dark"><img src="./icons/visibility_white_24dp.svg" alt="ver"/>Ver</Button>
             </div>
             </div>
         </Card.Body>

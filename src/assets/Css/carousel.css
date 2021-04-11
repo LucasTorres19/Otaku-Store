@@ -1,9 +1,7 @@
 .carousel{
-    margin-Top:1%;
-    margin-Left:10%;
-    margin-Right:10%;
-    margin-bottom: 1%;
-    width:80%
+    margin-bottom: 3%;
+    width:100%
+    
 }
 .images{
     height: 382px;
@@ -20,3 +18,5 @@
 
     }
   } 
+
+  
