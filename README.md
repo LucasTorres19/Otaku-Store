@@ -1,1 +1,1 @@
-its a otaku store 🐱‍👤🐱‍👤🐱‍👤.
+its a otaku store and exotic 🐱‍👤🐱‍👤🐱‍👤.
