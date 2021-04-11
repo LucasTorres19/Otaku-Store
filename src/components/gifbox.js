@@ -11,7 +11,7 @@ export default class gifbox extends Component{
                 fontFamily: "Nunito Sans, sans-serif",
                 backgroundImage:`url(${this.props.gif})`,
                 height:"200px",
-                width:"400px",
+                width:"20rem",
                 color:"white",
                 display:"flex",
                 justifyContent:"center",
