@@ -14,7 +14,7 @@ export default class cabezera extends Component{
                     <img className="icon" id='icon' src="./icons/logo_mqm.png" alt="icon"/>
                     <div className="flex-row">
                         <Form.Control type="text"  placeholder="Buscar..." size='lg' />  
-                        <img src="./icons/search_black_24dp.svg" className="search"/>
+                        <img src="./icons/search_black_24dp.svg" className="search" alt="icon"/>
                     </div>
                     <div className="iconos">
                         <img className="iconhd" src="./icons/cart-plus-solid.svg" alt="icon"></img>
