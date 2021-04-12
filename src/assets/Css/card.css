@@ -7,24 +7,20 @@
     font-size: 30px;
 }
 
-.carousel-container{
+.container-with-dots{
     margin-top:30px;
     margin-bottom:50px;
 }
 .carousel-item-padding-40-px{
     margin-bottom:10px;
-    margin-left: 20px;
-    margin-right:20px;
-    padding: 0;
+ 
 }
 @media screen and (max-width: 700px) {
    
    
     .carousel-item-padding-40-px{
         margin-bottom:10px;
-        margin-left: 70px;
-        margin-right:70px;
-        padding: 0;
+      
     }
    
   } 
