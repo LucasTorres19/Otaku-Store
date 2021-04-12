@@ -1,6 +1,5 @@
 import React,{Component} from "react";
 import {Card,Button} from  'react-bootstrap';
-import "./../assets/Css/card.css"
 
 export default class card extends Component{
 
@@ -46,8 +45,7 @@ render(){
     <React.Fragment>
 
         <Card style={{ width: '14rem',display:"inline-block",height:"312px"}} >
-        <Card.Img variant="top" style={style.image} src={this.props.link} />
-        
+        <Card.Img variant="top" style={style.image} src={this.props.link} />     
         <Card.Body style={{height:"162px",minHeight:"162px"}}>
             <Card.Text  style={style.titulo}>{this.props.titulo}</Card.Text>
             <div style={style.body}>

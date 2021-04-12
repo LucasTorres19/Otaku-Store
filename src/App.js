@@ -8,6 +8,7 @@ import Nav from "./components/nav.js";
 import Carrusel from "./components/carrusel.js";
 import CarruselCartas from "./components/card_carrusel.js"
 import Gifbox from "./components/gifbox.js"
+import Cards from "./components/cards.js"
 
 function App() {              
   return (
