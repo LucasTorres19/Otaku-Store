@@ -10,7 +10,7 @@
 .iconhd{
     width:30px;
     height:30px;
-    margin-Right:20px;
+    margin-Right:5px;
 }
   .flex-row{
     display: flex;
@@ -32,3 +32,8 @@
         margin-right: 10px;
     }
   } 
+
+  .iconos{
+    display: flex;
+    align-items: center;
+}
