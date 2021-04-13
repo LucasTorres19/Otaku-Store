@@ -10,9 +10,11 @@
 .container-with-dots{
     margin-top:30px;
     margin-bottom:50px;
+    
 }
 .carousel-item-padding-40-px{
     margin-bottom:10px;
+    align-items: center;
  
 }
 @media screen and (max-width: 700px) {
