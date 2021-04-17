@@ -70,7 +70,7 @@ export default class card_carousel extends Component{
                     <Cards titulo="Naruto #20" precio="525$" link="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/389/629/products/d3c0efd3-061a-43d5-b315-2025903ffd2b1-211f2505ecb5f1d83f16181614676578-480-0.jpg"/>
                     <Cards titulo="Killing Stalking, Vol. 1" precio="525$" link="https://images.cdn1.buscalibre.com/fit-in/360x360/aa/85/aa85d100d4a727e2faf4980c371c059b.jpg"/>
                     <Cards titulo="Ooshies - Disney Serie 2 Blind bag" precio="200$" link="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/389/629/products/descarga-421-e600ff1bd5fef2de9416047538097073-640-0.jpg"/>
-                </Carousel>;
+                </Carousel>
                          
             </React.Fragment>
         )
