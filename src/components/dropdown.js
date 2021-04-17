@@ -13,7 +13,6 @@ export default class dropdown extends Component{
 
         //<Dropdown.Item eventKey="1">Action 1</Dropdown.Item>
        
-          
             const array = Object.values(aux)
             
             let items = []
@@ -25,8 +24,6 @@ export default class dropdown extends Component{
             
             }
             return(items)
-        
-  
 }
 
     render(){
