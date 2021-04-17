@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/scss/app.scss';
 import "./../assets/Css/app.css"
 //Components
-import Header from './cabezera.js';
-import Footer from "./footer.js";
-import Nav from "./nav.js";
+import Header from '../components/cabezera.js';
+import Footer from "../components/footer.js";
+import Nav from "../components/nav.js";
 
 export default class Login extends Component{
-render(){
+
+  render(){
     
     return(
         <>
@@ -32,8 +33,7 @@ render(){
           <br />
           <br />
           <br />
-          <Footer/>
-          
+          <Footer/>   
         </>
     );
 }

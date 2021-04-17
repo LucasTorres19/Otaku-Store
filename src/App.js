@@ -1,8 +1,8 @@
 //Librerias
 import {Switch,Route} from 'wouter'
 //Components
-import Login from "./components/login.js"
-import Home from "./components/home.js"
+import Login from "./Pages/login.js"
+import Home from "./Pages/home.js"
 
 function App() {              
   
@@ -15,6 +15,8 @@ return (
       </Route>
       <Route path="/login"> 
         <Login />
+      </Route>
+      <Route path="/register">
       </Route>
     </Switch>
   </div>

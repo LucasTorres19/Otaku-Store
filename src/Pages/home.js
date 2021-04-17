@@ -1,11 +1,11 @@
 //Componentes
 import React,{Component} from 'react'
-import Header from './cabezera.js';
-import Footer from "./footer.js";
-import Nav from "./nav.js";
-import Carrusel from "./carrusel.js";
-import CarruselCartas from "./card_carrusel.js"
-import Gifbox from "./gifbox.js"
+import Header from '../components/cabezera.js';
+import Footer from "../components/footer.js";
+import Nav from "../components/nav.js";
+import Carrusel from "../components/carrusel.js";
+import CarruselCartas from "../components/card_carrusel.js"
+import Gifbox from "../components/gifbox.js"
 //estilos
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/scss/app.scss';
