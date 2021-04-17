@@ -35,14 +35,14 @@ export default class card_carousel extends Component{
                       desktop: {
                         breakpoint: {
                           max: 3000,
-                          min: 1024
+                          min: 1200
                         },
                         items: 5,
                         partialVisibilityGutter: 40
                       },
                       mobile: {
                         breakpoint: {
-                          max: 464,
+                          max: 750,
                           min: 0
                         },
                         items: 1,
@@ -50,10 +50,10 @@ export default class card_carousel extends Component{
                       },
                       tablet: {
                         breakpoint: {
-                          max: 1024,
-                          min: 464
+                          max: 1200,
+                          min: 750
                         },
-                        items: 2,
+                        items: 3,
                         partialVisibilityGutter: 30
                       }
                     }}

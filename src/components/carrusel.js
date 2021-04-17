@@ -18,7 +18,7 @@ export default class carrusel extends Component{
         <img
         className="d-block w-100 images"
         src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/161/337/themes/amazonas/slide-1617027626197-7696059215-044aa1f38d0dd5741c7e3438a70da0771617027627-1920-1920.jpg?1891748842"
-        alt="Ivrea"
+        alt="Ivreajaja"
         />
         <Carousel.Caption>     
         </Carousel.Caption>

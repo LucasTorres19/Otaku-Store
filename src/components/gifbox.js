@@ -17,7 +17,10 @@ export default class gifbox extends Component{
                 justifyContent:"center",
                 alignItems:"center",
                 borderRadius:"40px",
-                marginBotom:"30px"
+                marginBotom:"30px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                
             },
         }
 

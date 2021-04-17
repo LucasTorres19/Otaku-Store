@@ -1,8 +1,10 @@
 .carousel{
     margin-bottom: 3%;
-    width:100%
+    width:100%;
     
+
 }
+
 .images{
     height: 382px;
     object-fit: cover;
