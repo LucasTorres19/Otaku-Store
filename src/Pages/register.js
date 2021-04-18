@@ -28,12 +28,12 @@ export default class Login extends Component{
                 <Form.Control size="md" type="email" placeholder="Ej: pintball004@gmail.com" />
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="Telefono">
                 <Form.Label>Telefono (opcional)</Form.Label>
                 <Form.Control size="md" type="tel" placeholder="Ej: 91169968822" />
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group controlId="Dirrecion">
                 <Form.Label>Dirrecion (Despues se puede Cambiar.)</Form.Label>
                 <Form.Control size="md" type="tel" placeholder="Ej: Calle Falsa 123" />
               </Form.Group>
@@ -63,13 +63,13 @@ export default class Login extends Component{
             
             <Form.Text className="Button-Conteiner">
               <Button variant="dark" type="submit" >
-                Iniciar Sesion
+                Registrarse
               </Button>
             </Form.Text>
             
             <Form.Text className="text-muted">
             ¿Ya tenes Cuenta? 
-              <Link to="/register">
+              <Link to="/login">
                 ¡Inicia Sesion!
               </Link>
               </Form.Text>
