@@ -8,15 +8,14 @@ import CarruselCartas from "../components/card_carrusel.js"
 import Gifbox from "../components/gifbox.js"
 //estilos
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './../assets/scss/app.scss';
-import "./../assets/Css/app.css"
+import './../assets/Css/gifbox.css'
 
 export default class home extends Component{
 
     render(){
         return(
         <>
-            <Header />
+            <Header input="True"/>
             <Nav />
             <Carrusel />
             <CarruselCartas title="Novedades"/>

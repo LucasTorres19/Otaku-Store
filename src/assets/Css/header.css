@@ -1,6 +1,9 @@
 .icon{
     width:57px;
 }
+.icon:hover{
+  cursor:pointer;
+}
 .div{
     width:100%;
     display:flex;
@@ -12,6 +15,10 @@
     height:30px;
     margin-Right:5px;
 }
+.iconhd:hover{
+  cursor:pointer;
+
+}
   .flex-row{
     display: flex;
     flex-direction: row-reverse !important;
@@ -22,7 +29,7 @@
     padding-right:8px;
   }
 
-@media screen and (max-width: 640px) {
+@media   screen and (max-width: 640px) {
     .iconos{
         display: flex;
         margin-left: 15px;

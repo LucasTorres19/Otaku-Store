@@ -1,0 +1,20 @@
+.gifbox_conteiner{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    }
+    
+    @media screen and (max-width: 700px) {
+        
+        .gifbox_conteiner{
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;    
+            margin-bottom: 20px;
+        }
+        .gifbox_conteiner > *{
+            width: 20rem;
+        }
+      } 
+    
+    

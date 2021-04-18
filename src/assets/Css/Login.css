@@ -1,0 +1,25 @@
+.Form-Conteiner{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 10vh;
+}
+
+.Titulo-H1{
+   padding-bottom: 10px;
+   display: flex;
+   justify-content: center;
+}
+
+.text-muted{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.Button-Conteiner{
+
+    display: flex;
+    justify-content: center;
+}
+
