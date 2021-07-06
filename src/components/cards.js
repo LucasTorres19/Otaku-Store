@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import {Card,Button} from  'react-bootstrap';
+import {Link} from 'wouter';
 
 export default class card extends Component{
 
@@ -52,7 +53,9 @@ render(){
             <Card.Title  style={style.precio}>{this.props.precio}</Card.Title>
             <div style={style.botones}>
                 <Button variant="primary">Comprar</Button>
-                <Button variant="dark"><img src="./icons/visibility_white_24dp.svg" alt="ver"/>Ver</Button>
+                <Link to="/producto">
+                    <Button variant="dark"><img src="./icons/visibility_white_24dp.svg" alt="ver" />Ver</Button>
+                </Link>
             </div>
             </div>
         </Card.Body>

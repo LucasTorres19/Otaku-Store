@@ -1,9 +1,10 @@
 //Librerias
 import {Switch,Route} from 'wouter'
-//Components
-import Login from "./Pages/login.js"
-import Home from "./Pages/home.js"
+//Paginas
+import Login from './Pages/login.js'
+import Home from './Pages/home.js'
 import Register from './Pages/register.js'
+import Producto from './Pages/producto.js'
 //styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/app.scss';
@@ -18,11 +19,14 @@ return (
       <Route path="/">
         <Home /> 
       </Route>
-      <Route path="/login"> 
+      <Route path="/login">
         <Login />
       </Route>
       <Route path="/register">
         <Register/>
+      </Route>
+      <Route path="/producto">
+        <Producto />
       </Route>
     </Switch>
   </div>

@@ -1,0 +1,47 @@
+h1{
+    color: #3f3f3b;
+    font-family: "Nunito", sans-serif;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: left;
+    
+    padding-bottom: 30px;
+}
+h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #3f3f3b;
+}
+
+.conteiner{
+    display: flex;
+    
+}
+
+.conteiner-img{
+    padding: 50px;
+    padding-top: 50px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteiner-desc
+    {
+    color: #212121;
+    font-family: "Nunito", sans-serif;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-bottons{
+    padding-top: 50px;
+}
+
+
+

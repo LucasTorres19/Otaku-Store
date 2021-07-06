@@ -10,8 +10,6 @@ export default class dropdown extends Component{
     }
     
     Crear(aux){
-
-        //<Dropdown.Item eventKey="1">Action 1</Dropdown.Item>
        
             const array = Object.values(aux)
             

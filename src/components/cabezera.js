@@ -15,6 +15,7 @@ export default class cabezera extends Component{
                     <Link to="/">
                     <img className="icon" id='icon' src="./icons/logo_mqm.png" alt="icon"/>
                     </Link>
+                    
                     {this.props.input?
                         <>
                         <div className="flex-row">
@@ -38,9 +39,11 @@ export default class cabezera extends Component{
                         </Dropdown>    
                         </div>
                         </>
+                        
                         :
                         <></>
-                        }            
+                        }  
+
                 </div>
             </React.Fragment>
         )
