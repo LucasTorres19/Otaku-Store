@@ -46,7 +46,6 @@ export default class home extends Component{
         desc:data.desc,
         precio:data.precio
     })
-
 }
 
     render(){

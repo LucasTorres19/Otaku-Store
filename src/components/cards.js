@@ -50,7 +50,7 @@ render(){
         <Card.Body style={{height:"162px",minHeight:"162px"}}>
             <Card.Text  style={style.titulo}>{this.props.titulo}</Card.Text>
             <div style={style.body}>
-            <Card.Title  style={style.precio}>{this.props.precio}</Card.Title>
+            <Card.Title  style={style.precio}> {"$" + this.props.precio}</Card.Title>
             <div style={style.botones}>
                 <Button variant="primary">Comprar</Button>
                 <Link to="/producto">
