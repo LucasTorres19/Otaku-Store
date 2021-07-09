@@ -13,20 +13,20 @@ export default class cabezera extends Component{
             <React.Fragment>
                 <div className="div" id='header'>
                     <Link to="/">
-                    <img className="icon" id='icon' src="./icons/logo_mqm.png" alt="icon"/>
+                    <img className="icon" id='icon' src="https://i.imgur.com/y9rAoTS.png" alt="icon"/>
                     </Link>
                     
                     {this.props.input?
                         <>
                         <div className="flex-row">
                         <Form.Control type="text"  placeholder="Buscar..." size='lg' />  
-                        <img src="./icons/search_black_24dp.svg" className="search" alt="icon"/>
+                        <img src="https://i.imgur.com/vH1IoBC.png" className="search" alt="icon"/>
                         </div>
                         <div className="iconos">
-                        <img className="iconhd" src="./icons/cart-plus-solid.svg" alt="icon"></img>
+                        <img className="iconhd" src="https://i.imgur.com/cZZ3ScX.png" alt="icon"></img>
                         <Dropdown >
                             <Dropdown.Toggle variant="white" style={{boxShadow : 'none'}}>
-                                <img className="iconhd" src="./icons/user-solid.svg" alt="icon" ></img>
+                                <img className="iconhd" src="https://i.imgur.com/6d5vaTb.png" alt="icon" ></img>
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 <Link to="/login">

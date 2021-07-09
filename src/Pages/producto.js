@@ -8,7 +8,7 @@ import {Button} from  'react-bootstrap';
 //estilos
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/Css/gifbox.css';
-import './../assets/Css/producto.css'
+import './../assets/Css/producto.css';
 
 
 export default class producto extends Component{

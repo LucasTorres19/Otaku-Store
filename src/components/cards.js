@@ -54,7 +54,7 @@ render(){
             <div style={style.botones}>
                 <Button variant="primary">Comprar</Button>
                 <Link to={`/${"producto/"+ this.props.id}`}>
-                    <Button variant="dark"><img src="./icons/visibility_white_24dp.svg" alt="ver" />Ver</Button>
+                    <Button variant="dark"><img src="https://i.imgur.com/7nLbIK4.png" alt="ver" />Ver</Button>
                 </Link>
             </div>
             </div>
