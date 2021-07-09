@@ -53,7 +53,7 @@ render(){
             <Card.Title  style={style.precio}> {"$" + this.props.precio}</Card.Title>
             <div style={style.botones}>
                 <Button variant="primary">Comprar</Button>
-                <Link to="/producto">
+                <Link to={`/${"producto/"+ this.props.id}`}>
                     <Button variant="dark"><img src="./icons/visibility_white_24dp.svg" alt="ver" />Ver</Button>
                 </Link>
             </div>

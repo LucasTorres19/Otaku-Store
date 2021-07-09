@@ -4,8 +4,6 @@ import "react-multi-carousel/lib/styles.css";
 import Cards from "./cards.js";
 import "./../assets/Css/card_carrusel.css"
 
-
-  
 export default class card_carousel extends Component{
   
   constructor(props){
@@ -38,7 +36,7 @@ export default class card_carousel extends Component{
 
     let i = 0
     
-    console.log(filter)
+    //Filtrando los datos segun el filtro que llegue por parametro desde el home.js.
     
     data.map(objeto =>{
       
@@ -51,8 +49,10 @@ export default class card_carousel extends Component{
           FilterArray[i] = objeto
           i++
         }
-        
-    })
+
+        return undefined //no se pregunta porque esta esto aca ;).
+    })                  //lucas es un quejita 
+                       //quedaba fea la consola :c
     
     this.setState({
       productos : FilterArray
@@ -61,8 +61,11 @@ export default class card_carousel extends Component{
   }
   
   render(){
-       const productos = this.state.productos.map(producto =>{
-        return <Cards key ={producto._id} titulo={producto.title} precio={producto.precio} link={producto.img} />       
+      
+    //Creando las cartas.
+
+      const productos = this.state.productos.map(producto =>{
+        return <Cards key={producto._id} id={producto._id} titulo={producto.title} precio={producto.precio} link={producto.img} />       
       })
 
         return(

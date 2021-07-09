@@ -11,7 +11,7 @@ import './../assets/Css/gifbox.css';
 import './../assets/Css/producto.css'
 
 
-export default class home extends Component{
+export default class producto extends Component{
 
     constructor(props){
         super(props);
@@ -24,6 +24,7 @@ export default class home extends Component{
         }
         
         this.SearchProduct = this.SearchProduct.bind(this)
+        
     }
 
     componentDidMount() {
@@ -31,8 +32,10 @@ export default class home extends Component{
     }
 
     async SearchProduct(){
+    
+    const id = this.props.id
 
-    const url = "https://otaku-store-api.herokuapp.com/api/productos/60e4debfa70473001520e047"
+    const url = "https://otaku-store-api.herokuapp.com/api/productos/" + id
     
     const proxyurl = "https://gentle-sands-04799.herokuapp.com/";
 
@@ -52,7 +55,7 @@ export default class home extends Component{
         return(
         <>
             <Header input="True"/>
-                <Nav></Nav>
+                <Nav/>
                 <div className="conteiner">
 
                     <div className="conteiner-img">

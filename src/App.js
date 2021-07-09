@@ -25,8 +25,8 @@ return (
       <Route path="/register">
         <Register/>
       </Route>
-      <Route path="/producto">
-        <Producto />
+      <Route path="/producto/:id">
+        {(params) => <Producto  id={params.id}/>}
       </Route>
     </Switch>
   </div>
