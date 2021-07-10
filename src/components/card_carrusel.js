@@ -19,10 +19,10 @@ export default class card_carousel extends Component{
 }
   
   componentDidMount(){   
-    this.CreateCards(this.props.type)
+    this.CreateCards(this.props.type,this.props.cat)
   }
 
-  async CreateCards(filter){
+  async CreateCards(filter,filtercat){
   
     const apiURL='https://otaku-store-api.herokuapp.com/api/productos';
     
@@ -39,15 +39,25 @@ export default class card_carousel extends Component{
     //Filtrando los datos segun el filtro que llegue por parametro desde el home.js.
     
     data.map(objeto =>{
-      
-        if (objeto.type === filter || objeto.type === filter){
-          FilterArray[i] = objeto
-          i++
+      if(filtercat ==="null"){
           
+          if (objeto.type === filter || objeto.type === filter.toLowerCase()){
+          
+            FilterArray[i] = objeto
+            i++
+            
         }
-        else if (filter === "todos"){
-          FilterArray[i] = objeto
-          i++
+          else if (filter === "all" && filtercat==="null"){
+            FilterArray[i] = objeto
+            i++
+        }}
+        else{
+          if(objeto.cat === filtercat || objeto.cat === filtercat.toLowerCase()){
+            FilterArray[i] = objeto
+            i++
+
+          }
+
         }
 
         return undefined //no se pregunta porque esta esto aca ;).

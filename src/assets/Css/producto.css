@@ -1,25 +1,39 @@
 h1{
     color: #3f3f3b;
     font-family: "Nunito", sans-serif;
-    font-size: 2em;
+    font-size: 40px;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
     
-    padding-bottom: 30px;
+    
 }
 h2{
     font-size: 28px;
     font-weight: 700;
+    
 }
 h3{
-    font-size: 20px;
-    font-weight: 700;
-    color: #3f3f3b;
+    font-size: 15px;
+    
+    
 }
-
+.ruta{
+    color:gray;
+    font-size:14px;
+}
+.letraspequeñas{
+    font-size: 10px;
+}
+.cuotas{
+    font-size: 14px;
+    
+    padding-bottom: 0px;
+    margin-bottom:0px;
+}
 .conteiner{
     display: flex;
-    
+    height: 100%;
+    max-height: 100%;
 }
 
 .conteiner-img{
@@ -28,20 +42,100 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
-.conteiner-desc
-    {
+.conteiner-img img{
+    height: 550px;
+    width: 400px;
+}
+
+.conteiner-desc{
     color: #212121;
     font-family: "Nunito", sans-serif;
-    padding-top: 100px;
+    padding-top: 40px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
+    
 }
 
 .conteiner-bottons{
     padding-top: 50px;
+    text-align: left;
 }
 
+@media screen and (max-width: 800px)  and (min-width : 700px){
+        
+
+    .conteiner-img{
+        
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .conteiner-img img{
+        height: 600px;
+        width: 300px;
+    }
+    
+    .conteiner-desc{
+        color: #212121;
+        font-family: "Nunito", sans-serif;
+        padding-top: 30px;
+        padding-left: 5px;
+    }
+  
+    
+    } 
+    
+@media screen and (max-width: 700px) {
+        
+   
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   padding: 0;
+}
+.conteiner-img{
+    
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.conteiner-img img{
+    height: 400px;
+    width: 100%;
+}
+
+.conteiner-desc{
+    color: #212121;
+    font-family: "Nunito", sans-serif;
+    padding-top: 30px;
+    padding-left:5px;
+
+}
+.conteiner-bottons{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+} 
 
 
