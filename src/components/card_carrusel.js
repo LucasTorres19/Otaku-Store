@@ -35,24 +35,25 @@ export default class card_carousel extends Component{
     let FilterArray = []
 
     let i = 0
+    const limite = 15
     
     //Filtrando los datos segun el filtro que llegue por parametro desde el home.js.
     
     data.map(objeto =>{
       if(filtercat ==="null"){
           
-          if (objeto.type === filter || objeto.type === filter.toLowerCase()){
+          if ( (i <= limite  && objeto.type === filter)  || (i <= limite && objeto.type === filter.toLowerCase()) ){
           
             FilterArray[i] = objeto
             i++
             
         }
-          else if (filter === "all" && filtercat==="null"){
+          else if ( i <= limite  && filter === "all" && filtercat==="null"){
             FilterArray[i] = objeto
             i++
         }}
         else{
-          if(objeto.cat === filtercat || objeto.cat === filtercat.toLowerCase()){
+          if((i <= limite  && objeto.cat === filtercat) || (i <= limite && objeto.cat === filtercat.toLowerCase())){
             FilterArray[i] = objeto
             i++
 

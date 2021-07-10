@@ -25,6 +25,7 @@ export default class home extends Component{
                 <Gifbox title="Yu-Gi-Oh" gif="https://img.unocero.com/2019/02/yu-gi-oh-nintendo-switch.gif"/>   
             </div>
             <CarruselCartas title="Comics"  type="Comic" cat="null"/>
+            <CarruselCartas title="Libros"  type="Libros" cat="null"/>
             <Footer />   
         </>
         )
