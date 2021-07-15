@@ -9,6 +9,9 @@ nav{
     width:100%;
    
 }
+.link{
+    text-decoration:none;
+}
 
 .contenedor{
     margin-bottom: 10px;

@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
 import Dropdown from "./dropdown.js";
 import "./../assets/Css/nav.css";
+import Link from 'wouter'
 
 
 export default class Nav extends Component{
@@ -49,12 +50,12 @@ export default class Nav extends Component{
                 <React.Fragment>
                 <nav>
                     <div className="contenedor">
-                        <Dropdown  title="Manga" items={this.state.manga}/>
-                        <Dropdown  title="Comics" items={this.state.comics} />
-                        <Dropdown  title="Libros" items={this.state.libros}/>
-                        <Dropdown  title="Juegos" items={this.state.juegos}/>
-                        <Dropdown  title="Merchandising" items={this.state.merchandising}/>
-                        <Dropdown  title="Hardware" items={this.state.hardware}/>
+                        <a className="link" href="/productos/Manga"> <Dropdown  title="Manga" items={this.state.manga}/> </a>
+                        <a className="link" href="/productos/Comic"> <Dropdown  title="Comics" items={this.state.comics} /> </a>
+                        <a className="link" href="/productos/Libros"> <Dropdown  title="Libros" items={this.state.libros}/> </a>
+                        <a className="link" href="/productos/Juegos"> <Dropdown  title="Juegos" items={this.state.juegos}/> </a>
+                        <a className="link" href="/productos/Merchandising"> <Dropdown  title="Merchandising" items={this.state.merchandising}/> </a>
+                        <a className="link" href="/productos/Hardware"> <Dropdown  title="Hardware" items={this.state.hardware}/> </a>
                         
                     </div>
                 </nav>

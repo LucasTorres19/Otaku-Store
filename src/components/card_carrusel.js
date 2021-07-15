@@ -6,6 +6,7 @@ import "./../assets/Css/card_carrusel.css"
 
 export default class card_carousel extends Component{
   
+  
   constructor(props){
     super(props);
     
@@ -16,10 +17,27 @@ export default class card_carousel extends Component{
     }
 
     this.CreateCards = this.CreateCards.bind(this)
+    this.shuffle = this.shuffle.bind(this)
 }
   
   componentDidMount(){   
     this.CreateCards(this.props.type,this.props.cat)
+  }
+
+  shuffle(array) {
+    
+    let currentIndex = array.length,randomIndex;
+  
+    while (0 !== currentIndex) {
+  
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
   }
 
   async CreateCards(filter,filtercat){
@@ -37,9 +55,10 @@ export default class card_carousel extends Component{
     let i = 0
     const limite = 15
     
+    
     //Filtrando los datos segun el filtro que llegue por parametro desde el home.js.
     
-    data.map(objeto =>{
+    this.shuffle(data).map(objeto =>{
       if(filtercat ==="null"){
           
           if ( (i <= limite  && objeto.type === filter)  || (i <= limite && objeto.type === filter.toLowerCase()) ){

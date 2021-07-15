@@ -84,7 +84,6 @@ render(){
                 <div style={styles.nombres} >
                   <p style={styles.p}>Torres E.Lucas</p>
                   <p style={styles.p}>Brandan Walser E.Carlos</p>
-                  <p style={styles.p}>Britez Alvarenga E.Leandro</p>
                   <p style={styles.h1}>Copyright © 2020-2021 MQM S.R.L</p>
                 </div>
                

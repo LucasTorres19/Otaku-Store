@@ -1,0 +1,19 @@
+.List-Conteiner{
+    margin:30px;
+    display: flex;
+    flex-flow:  wrap;
+    justify-content: space-around;
+}
+.Cards{
+    margin: 20px;
+}
+.Title{
+
+   color: #3f3f3b;
+   font-family: "Nunito", sans-serif;
+   font-size: 40px;
+   font-weight: 400;
+   text-align: center;
+   padding-top: 40px;
+
+}
