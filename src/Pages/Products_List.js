@@ -7,11 +7,9 @@ import '../assets/Css/list.css'
 //estilos
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 export default class home extends Component{
     
-    render(){
+   render(){
 
         return(
         <>

@@ -64,6 +64,9 @@ h3{
     padding-top: 50px;
     text-align: left;
 }
+.Image{
+    object-fit: cover;
+}
 
 @media screen and (max-width: 800px)  and (min-width : 700px){
         

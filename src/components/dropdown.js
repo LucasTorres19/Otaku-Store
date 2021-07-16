@@ -16,9 +16,8 @@ export default class dropdown extends Component{
             let items = []
             
             for (let index = 0; index < array.length; index++) {
-
-            
-            items[index] = <Dropdown.Item key={index}eventKey={index}>{array[index]}</Dropdown.Item>               
+                
+            items[index] = <Dropdown.Item href={"/"+ this.props.title +"/"+ array[index]} key={index}eventKey={index}>{array[index]}</Dropdown.Item>           
             
             }
             return(items)
@@ -28,12 +27,15 @@ export default class dropdown extends Component{
         return(
             <React.Fragment>
                 <div className="mt-2">
+                
                     <SplitButton
                     menuAlign={{ lg: 'left' }}
                     title={this.props.title}
-                    id={this.props.title}                  
+                    id={this.props.title} 
+                     href={"/"+this.props.title}                 
                     >
                     {this.Crear(this.props.items)}  
+                    
                     </SplitButton>
                 </div>
             </React.Fragment>

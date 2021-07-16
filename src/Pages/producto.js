@@ -69,7 +69,7 @@ constructor(props){
 
                     <div className="conteiner-img">
                            
-                        <img src={this.state.img} alt={this.state.titulo} ></img>
+                        <img src={this.state.img} alt={this.state.titulo} className="Image"/>
 
                     </div>
 
@@ -77,7 +77,7 @@ constructor(props){
                         <p className="ruta">{"Inicio>"+ this.state.type+">"+this.state.cat+">"+this.state.titulo}</p>
                         <h1>{this.state.titulo}</h1>
                         <h2><b>{"$"+ this.state.precio+".00"}</b></h2>
-                        <p className="cuotas"><b>18</b> Cuotas de <b>$51,64</b> </p>
+                        <p className="cuotas"><b>18</b> Cuotas de <b>${(this.state.precio/18).toFixed(2)}</b> </p>
                         <p className="letraspequeñas">Ver mas detalles</p>
                         <h3>{this.state.desc}</h3>
 
@@ -91,7 +91,7 @@ constructor(props){
                 </div>
                 
                 {this.state.car?
-                <CarruselCartas title="Otros Mangas" type={this.state.type} cat={this.state.cat} />
+                <CarruselCartas title={"Otros " + this.state.cat } type={this.state.type} cat={this.state.cat} />
                 :
                 <></>
                 }

@@ -30,12 +30,14 @@ return (
         {(params) => <Product  id={params.id}/>}
       </Route>
       
-      <Route path="/productos/:type/:cat">
+      <Route path="/:type/:cat">
       {(params) => <ProductsList type={params.type} cat={params.cat}/>}
       </Route>
-      <Route path="/productos/:type">
+
+      <Route path="/:type">
       {(params) => <ProductsList type={params.type} cat="null"/>}
       </Route>
+     
     </Switch>
   </div>
   );

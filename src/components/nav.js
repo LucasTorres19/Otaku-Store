@@ -1,7 +1,7 @@
 import React ,{Component} from 'react';
 import Dropdown from "./dropdown.js";
 import "./../assets/Css/nav.css";
-import Link from 'wouter'
+
 
 
 export default class Nav extends Component{
@@ -18,8 +18,8 @@ export default class Nav extends Component{
             },
             juegos:
             {
-                Fila1:"Trok", Fila2:"YU-GI-OH!",Fila3:"Pokemon",Fila4:"Accesorios",
-                Fila5:"MAGIC THE GATHERING",Fila6:"Juegos de Mesa",Fila7:"Juegos Digitales",                             
+                Fila1:"Trok", Fila2:"Yu-Gi-Oh",Fila3:"Pokemon",
+                Fila4:"MAGIC THE GATHERING",Fila5:"Juegos de Mesa",Fila6:"Juegos Digitales",                             
             },
             libros:
             {
@@ -27,13 +27,12 @@ export default class Nav extends Component{
             },
             merchandising:
             {
-                Fila1:"Peluches",Fila2:"Mcfarlane",Fila3:"Ooshies",Fila4:"Spinmaster",
-                Fila5:"Anime",Fila6:"FUNKOS POP",Fila7:"Bufandas"
+                Fila1:"Figuras",Fila2:"Peluches",Fila3:"Pins",Fila4:"Ropa"
             },
             hardware:
             {
                 Fila1:"Motherboard",Fila2:"Procesadores", Fila3:"Memorias Ram", Fila4:"Almacenamiento",
-                Fila5:"Placas de Video",Fila6:"Gabinentes y Fuentes", Fila7:"Perifericos",Fila8:"Equipos y Notebooks",Fila9:"Cables",
+                Fila5:"Graficas",Fila6:"Fuentes",Fila7:"Gabinetes", Fila8:"Perifericos",Fila9:"Equipos y Notebooks",Fila10:"Cables",
                 
             },
             comics:
@@ -50,13 +49,12 @@ export default class Nav extends Component{
                 <React.Fragment>
                 <nav>
                     <div className="contenedor">
-                        <a className="link" href="/productos/Manga"> <Dropdown  title="Manga" items={this.state.manga}/> </a>
-                        <a className="link" href="/productos/Comic"> <Dropdown  title="Comics" items={this.state.comics} /> </a>
-                        <a className="link" href="/productos/Libros"> <Dropdown  title="Libros" items={this.state.libros}/> </a>
-                        <a className="link" href="/productos/Juegos"> <Dropdown  title="Juegos" items={this.state.juegos}/> </a>
-                        <a className="link" href="/productos/Merchandising"> <Dropdown  title="Merchandising" items={this.state.merchandising}/> </a>
-                        <a className="link" href="/productos/Hardware"> <Dropdown  title="Hardware" items={this.state.hardware}/> </a>
-                        
+                         <Dropdown title="Manga"   items={this.state.manga}/>
+                         <Dropdown  title="Comic" items={this.state.comics} /> 
+                        <Dropdown  title="Libros" items={this.state.libros}/> 
+                         <Dropdown  title="Juegos" items={this.state.juegos}/> 
+                         <Dropdown  title="Merchandising" items={this.state.merchandising}/> 
+                         <Dropdown  title="Hardware" items={this.state.hardware}/>  
                     </div>
                 </nav>
                 </React.Fragment>
