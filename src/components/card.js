@@ -1,5 +1,5 @@
-import React,{Component} from "react";
-import {Card,Button} from  'react-bootstrap';
+import React,{ Component } from "react";
+import { Card,Button } from  'react-bootstrap';
 
 export default class card extends Component{
 
@@ -75,8 +75,5 @@ render(){
       
     </React.Fragment>
           )
-
-
-        }
-
+   }
 }

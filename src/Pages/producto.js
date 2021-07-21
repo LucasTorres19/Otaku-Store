@@ -1,13 +1,10 @@
 import React,{ Component  } from 'react';
-import Header from '../components/cabezera.js';
+import Header from '../components/header.js';
 import Footer from "../components/footer.js";
 import Nav from "../components/nav.js";
 import {Button} from  'react-bootstrap';
 import CarruselCartas from "../components/card_carrusel.js"
-
-//estilos
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './../assets/Css/gifbox.css';
 import './../assets/Css/producto.css';
 
 export default class producto extends Component{

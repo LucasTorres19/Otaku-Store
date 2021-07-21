@@ -1,36 +1,42 @@
-.icon{
+.header-conteiner{
+  width:100%;
+  display:flex;
+  justify-Content:space-between;
+  align-Items:center;      
+}
+
+.mqm-icon{
     width:57px;
 }
-.icon:hover{
+.mqm-icon:hover{
   cursor:pointer;
 }
-.div{
-    width:100%;
-    display:flex;
-    justify-Content:space-between;
-    align-Items:center;      
-}
-.iconhd{
+
+.icon-style{
     width:30px;
     height:30px;
     margin-Right:5px;
 }
-.iconhd:hover{
+.icon-style:hover{
   cursor:pointer;
 
 }
-  .flex-row{
+
+.Buscador{
     display: flex;
     flex-direction: row-reverse !important;
   }
+
+
   .search{
     align-self: center;
     position:absolute;
     padding-right:8px;
   }
 
+
 @media   screen and (max-width: 640px) {
-    .iconos{
+    .container-icons{
         display: flex;
         margin-left: 15px;
     }
@@ -40,7 +46,7 @@
     }
   } 
 
-  .iconos{
+  .container-icons{
     display: flex;
     align-items: center;
 }

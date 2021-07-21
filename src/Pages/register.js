@@ -5,9 +5,9 @@ import {Link} from 'wouter'
 import './../assets/scss/app.scss';
 import './../assets/Css/register.css'
 //Components
-import Header from '../components/cabezera.js';
+import Header from '../components/header.js';
 
-export default class Login extends Component{
+export default class register extends Component{
 
   render(){
      

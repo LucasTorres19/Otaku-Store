@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import Cards from "./cards";
+import Cards from "./card";
 import "../assets/Css/list.css"
 
 export default class list extends Component{
@@ -12,45 +12,45 @@ export default class list extends Component{
           productos: []
         
         }
-        this.CreateCards = this.CreateCards.bind(this)
+        this.createCards = this.createCards.bind(this)
     }
 
     componentDidMount(){
-        this.CreateCards(this.props.type,this.props.cat)
+        this.createCards(this.props.type,this.props.cat)
     }
 
-    async CreateCards(filter,filtercat){
+    async createCards(filter,filtercat){
   
-        const apiURL='https://otaku-store-api.herokuapp.com/api/productos';
+        const APIURL='https://otaku-store-api.herokuapp.com/api/productos';
         
-        const proxyurl = "https://gentle-sands-04799.herokuapp.com/";
+        const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
     
-        const query = await fetch(proxyurl + apiURL)
+        const QUERY = await fetch(PROXYURL + APIURL)
         
-        const data = await query.json()
+        const DATA = await QUERY.json()
         
-        let FilterArray = []
+        let filterArray = []
     
         let i = 0
   
         //Filtrando los datos segun el filtro que llegue por parametro desde el home.js.
         
-        data.map(objeto =>{
+        DATA.map(productos =>{
           if(filtercat ==="null"){
               
-              if ( ( objeto.type === filter)  || (objeto.type === filter.toLowerCase()) ){
+              if ( ( productos.type === filter)  || (productos.type === filter.toLowerCase()) ){
               
-                FilterArray[i] = objeto
+                filterArray[i] = productos
                 i++
                 
             }
               else if ( filter === "all" && filtercat==="null"){
-                FilterArray[i] = objeto
+                filterArray[i] = productos
                 i++
             }}
             else{
-              if(( objeto.cat === filtercat) || ( objeto.cat === filtercat.toLowerCase())){
-                FilterArray[i] = objeto
+              if(( productos.cat === filtercat) || ( productos.cat === filtercat.toLowerCase())){
+                filterArray[i] = productos
                 i++
     
               }
@@ -62,7 +62,7 @@ export default class list extends Component{
                            
         
         this.setState({
-          productos : FilterArray
+          productos : filterArray
         })
       
       }
@@ -71,7 +71,7 @@ export default class list extends Component{
 
     render(){        
         
-        const productos = this.state.productos.map(producto =>{
+        const PRODUCTOS = this.state.productos.map(producto =>{
             return(
             <div className='Cards' key={Math.random(0,100)}>
                 <Cards  key={producto._id} id={producto._id} titulo={producto.title} precio={producto.precio} link={producto.img} />       
@@ -82,7 +82,7 @@ export default class list extends Component{
         return(
         <>
             <div className="List-Conteiner">
-                {productos}
+                {PRODUCTOS}
             </div>
         </>
         )

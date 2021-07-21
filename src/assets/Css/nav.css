@@ -13,7 +13,7 @@ nav{
     text-decoration:none;
 }
 
-.contenedor{
+.dropdown-contanier{
     margin-bottom: 10px;
     display:flex;
     flex-Direction:row;
@@ -35,7 +35,7 @@ nav{
        
     }
 
-    .contenedor{
+    .dropdown-contanier{
         display: flex;
         flex-direction: column;
     }

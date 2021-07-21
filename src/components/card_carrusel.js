@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import Cards from "./cards.js";
+import Cards from "./card.js";
 import "./../assets/Css/card_carrusel.css"
+import "react-multi-carousel/lib/styles.css";
 
 export default class card_carousel extends Component{
-  
   
   constructor(props){
     super(props);
@@ -16,12 +15,12 @@ export default class card_carousel extends Component{
     
     }
 
-    this.CreateCards = this.CreateCards.bind(this)
+    this.createCards = this.createCards.bind(this)
     this.shuffle = this.shuffle.bind(this)
 }
   
   componentDidMount(){   
-    this.CreateCards(this.props.type,this.props.cat)
+    this.createCards(this.props.type,this.props.cat)
   }
 
   shuffle(array) {
@@ -40,40 +39,41 @@ export default class card_carousel extends Component{
     return array;
   }
 
-  async CreateCards(filter,filtercat){
+  async createCards(filter,filtercat){
   
-    const apiURL='https://otaku-store-api.herokuapp.com/api/productos';
+    const APIURL='https://otaku-store-api.herokuapp.com/api/productos';
     
-    const proxyurl = "https://gentle-sands-04799.herokuapp.com/";
+    const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
 
-    const query = await fetch(proxyurl + apiURL)
+    const QUERY = await fetch(PROXYURL + APIURL)
     
-    const data = await query.json()
+    const DATA = await QUERY.json()
     
-    let FilterArray = []
+    let filterArray = []
 
     let i = 0
-    const limite = 15
+    const LIMITE = 15
     
     
     //Filtrando los datos segun el filtro que llegue por parametro desde el home.js.
     
-    this.shuffle(data).map(objeto =>{
+    this.shuffle(DATA).map(producto =>{
+      
       if(filtercat ==="null"){
           
-          if ( (i <= limite  && objeto.type === filter)  || (i <= limite && objeto.type === filter.toLowerCase()) ){
+          if ( (i <= LIMITE  && producto.type === filter)  || (i <= LIMITE && producto.type === filter.toLowerCase()) ){
           
-            FilterArray[i] = objeto
+            filterArray[i] = producto
             i++
             
         }
-          else if ( i <= limite  && filter === "all" && filtercat==="null"){
-            FilterArray[i] = objeto
+          else if ( i <= LIMITE  && filter === "all" && filtercat==="null"){
+            filterArray[i] = producto
             i++
         }}
         else{
-          if((i <= limite  && objeto.cat === filtercat) || (i <= limite && objeto.cat === filtercat.toLowerCase())){
-            FilterArray[i] = objeto
+          if((i <= LIMITE  && producto.cat === filtercat) || (i <= LIMITE && producto.cat === filtercat.toLowerCase())){
+            filterArray[i] = producto
             i++
 
           }
@@ -85,7 +85,7 @@ export default class card_carousel extends Component{
                        //quedaba fea la consola :c
     
     this.setState({
-      productos : FilterArray
+      productos : filterArray
     })
   
   }
@@ -94,7 +94,7 @@ export default class card_carousel extends Component{
       
     //Creando las cartas.
 
-      const productos = this.state.productos.map(producto =>{
+      const PRODUCTOS = this.state.productos.map(producto =>{
         return <Cards key={producto._id} id={producto._id} titulo={producto.title} precio={producto.precio} link={producto.img} />       
       })
 
@@ -151,7 +151,7 @@ export default class card_carousel extends Component{
                     swipeable
  
                   >
-                    {productos} 
+                    {PRODUCTOS} 
                     
                 </Carousel>                        
             </React.Fragment>

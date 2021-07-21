@@ -1,15 +1,12 @@
-//Librerias
-import {Switch,Route} from 'wouter'
-//Paginas
+import { Switch , Route } from 'wouter'
 import Login from './Pages/login.js'
 import Home from './Pages/home.js'
 import Register from './Pages/register.js'
 import Product from './Pages/producto.js'
-import ProductsList from './Pages/Products_List.js'
-//styles
+import ProductsList from './Pages/products_List.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/app.scss';
-import './assets/Css/Index.css';
+import './assets/Css/app.css';
 
 function App() {              
   

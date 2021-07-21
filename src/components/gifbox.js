@@ -1,6 +1,5 @@
 import React,{Component} from "react";
 
-
 export default class gifbox extends Component{
 
     render(){
@@ -30,9 +29,9 @@ export default class gifbox extends Component{
         }
 
         return(
-            <React.Fragment>
-                <h1 style={style.h1}><a style={style.a} href={`/productos/${this.props.title}`}>{this.props.title}</a></h1>
-            </React.Fragment>
+            <>
+                <h1 style={style.h1}><a style={style.a} href={`/${this.props.title}`}>{this.props.title}</a></h1>
+            </>
         )
     }
 

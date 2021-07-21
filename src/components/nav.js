@@ -1,8 +1,6 @@
-import React ,{Component} from 'react';
+import React ,{ Component } from 'react';
 import Dropdown from "./dropdown.js";
 import "./../assets/Css/nav.css";
-
-
 
 export default class Nav extends Component{
 
@@ -10,6 +8,7 @@ export default class Nav extends Component{
 
     constructor(props){
         super(props)
+        
         this.state = {
             manga:
             {
@@ -40,33 +39,33 @@ export default class Nav extends Component{
                 Fila1:"DC",Fila2:"Marvel"
             },
         }
-        this.CrearNav = this.CrearNav.bind(this)
+        this.crearNav = this.crearNav.bind(this)
     } 
 
-    CrearNav(){
+    crearNav(){
 
             return(
-                <React.Fragment>
+                <>
                 <nav>
-                    <div className="contenedor">
+                    <div className="dropdown-contanier">
                          <Dropdown title="Manga"   items={this.state.manga}/>
                          <Dropdown  title="Comic" items={this.state.comics} /> 
-                        <Dropdown  title="Libros" items={this.state.libros}/> 
+                         <Dropdown  title="Libros" items={this.state.libros}/> 
                          <Dropdown  title="Juegos" items={this.state.juegos}/> 
                          <Dropdown  title="Merchandising" items={this.state.merchandising}/> 
                          <Dropdown  title="Hardware" items={this.state.hardware}/>  
                     </div>
                 </nav>
-                </React.Fragment>
+                </>
             )
     }
     
     render(){
         
         return(
-            <React.Fragment>         
-               {this.CrearNav()}   
-            </React.Fragment>
+            <>         
+               {this.crearNav()}   
+            </>
 
         );
 

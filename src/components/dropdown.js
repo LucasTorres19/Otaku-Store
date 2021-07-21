@@ -9,15 +9,15 @@ export default class dropdown extends Component{
         this.Crear = this.Crear.bind(this)
     }
     
-    Crear(aux){
+    Crear(Categories){
        
-            const array = Object.values(aux)
+            const CATEGORIES_JSON = Object.values(Categories)
             
             let items = []
             
-            for (let index = 0; index < array.length; index++) {
+            for (let i = 0; i < CATEGORIES_JSON.length; i++) {
                 
-            items[index] = <Dropdown.Item href={"/"+ this.props.title +"/"+ array[index]} key={index}eventKey={index}>{array[index]}</Dropdown.Item>           
+            items[i] = <Dropdown.Item href={"/"+ this.props.title +"/"+ CATEGORIES_JSON[i]} key={i}eventKey={i}>{CATEGORIES_JSON[i]}</Dropdown.Item>           
             
             }
             return(items)
