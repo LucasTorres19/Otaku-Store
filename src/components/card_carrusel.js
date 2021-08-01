@@ -41,7 +41,7 @@ export default class card_carousel extends Component{
 
   async createCards(filter,filtercat){
   
-    const APIURL='https://otaku-store-api.herokuapp.com/api/productos';
+    const APIURL='https://otakuapi.herokuapp.com/api/productos';
     
     const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
 
