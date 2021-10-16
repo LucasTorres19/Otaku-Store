@@ -35,7 +35,7 @@ constructor(props){
     
     const id = this.props.id
 
-    const url = "https://otaku-store-api.herokuapp.com/api/productos/" + id
+    const url = "https://otakuapi.herokuapp.com/api/productos/" + id
     
     const proxyurl = "https://gentle-sands-04799.herokuapp.com/";
 
