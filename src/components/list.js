@@ -78,14 +78,17 @@ export default class list extends Component{
             </div>
             )  
         })
-
+        if (PRODUCTOS.length !== 0){
         return(
         <>
+         
             <div className="List-Conteiner">
+              
+                
                 {PRODUCTOS}
             </div>
         </>
-        )
+        )}else {return(<h1>Not found</h1>)}
     }
     
 }
