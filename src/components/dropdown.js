@@ -17,7 +17,7 @@ export default class dropdown extends Component{
             
             for (let i = 0; i < CATEGORIES_JSON.length; i++) {
                 
-            items[i] = <Dropdown.Item href={"/"+ this.props.title +"/"+ CATEGORIES_JSON[i]} key={i}eventKey={i}>{CATEGORIES_JSON[i]}</Dropdown.Item>           
+            items[i] = <Dropdown.Item href={"/productos/"+ this.props.title +"/"+ CATEGORIES_JSON[i]} key={i}eventKey={i}>{CATEGORIES_JSON[i]}</Dropdown.Item>           
             
             }
             return(items)
@@ -32,7 +32,7 @@ export default class dropdown extends Component{
                     menuAlign={{ lg: 'left' }}
                     title={this.props.title}
                     id={this.props.title} 
-                     href={"/"+this.props.title}                 
+                     href={"/productos/"+this.props.title}                 
                     >
                     {this.Crear(this.props.items)}  
                     

@@ -4,6 +4,7 @@ import Home from './Pages/home.js'
 import Register from './Pages/register.js'
 import Product from './Pages/producto.js'
 import ProductsList from './Pages/products_List.js'
+import Notfound from './Pages/404.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/scss/app.scss';
 import './assets/Css/app.css';
@@ -27,14 +28,16 @@ return (
         {(params) => <Product  id={params.id}/>}
       </Route>
       
-      <Route path="/:type/:cat">
+      <Route path="/productos/:type/:cat">
       {(params) => <ProductsList type={params.type} cat={params.cat}/>}
       </Route>
 
-      <Route path="/:type">
+      <Route path="/productos/:type">
       {(params) => <ProductsList type={params.type} cat="null"/>}
       </Route>
-     
+     <Route >
+       <Notfound/>
+     </Route>
     </Switch>
   </div>
   );
