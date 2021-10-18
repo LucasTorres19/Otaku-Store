@@ -17,3 +17,13 @@
    padding-top: 40px;
 
 }
+.notfound-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 0px;
+}
+.notfound-container__h1{
+    font-size: 30px;
+}

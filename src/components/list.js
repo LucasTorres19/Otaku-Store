@@ -88,7 +88,11 @@ export default class list extends Component{
                 {PRODUCTOS}
             </div>
         </>
-        )}else {return(<h1>Not found</h1>)}
+        )}else {return(
+          <div className="notfound-container">
+            <h1 className="notfound-container__h1">0 productos encontrados D:</h1>
+          </div>
+          )}
     }
     
 }
