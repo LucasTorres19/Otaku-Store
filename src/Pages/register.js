@@ -1,6 +1,6 @@
-import React,{Component} from 'react'
+import React ,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form,Button} from  'react-bootstrap';
+import {Form,Button,Alert} from  'react-bootstrap';
 import {Link} from 'wouter'
 import './../assets/scss/app.scss';
 import './../assets/Css/register.css'
@@ -9,37 +9,19 @@ import { Formik, ErrorMessage  } from 'formik';
 import Header from '../components/header.js';
 
 
-export default class register extends Component{
-
-  constructor(props){
-    super(props);
-    
-    this.state ={
-      nombre:"",
-      estado:1,
-      mail:"",
-      genero:"Masculino",
-      contraseña:"",
-      dir:"",
-      telefono: 9113243543
-
-    }
-  }
-
-  onSubmit(evt){
+export default function Register() {
+const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
+function postApi(datos){
     const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
 
-    evt.preventDefault()
     fetch(PROXYURL + "https://otakuapi.herokuapp.com/api/usuarios",{
       method:'POST',
       headers:{
         'content-type':'application/json',
-      },body: JSON.stringify(this.state)
-      
+      },body: JSON.stringify(datos)
     })
     .then(res => res.json())
     .then(res =>{
-
       if (res.auth){
 
         alert("usuario Creado.")
@@ -47,18 +29,6 @@ export default class register extends Component{
     })
   }
 
-  valueToState  = (evt) =>{
-  
-  const {name,value} = evt.target
-
-  this.setState({
-    [name]:value 
-  })
-
-  }
-
-  render(){
-     
     return(
         <>
          <Header/>
@@ -66,26 +36,28 @@ export default class register extends Component{
 
          initialValues={{
 					nombre: '',
-          email:'',
+          mail:'',
           telefono:'',
           dir:'',
           contraseña:'',
-          contraseñaConfirm:''
+          contraseñaConfirm:'',
+          genero:'',
+          estado:1,
 				}}
 
          validate={(valores)=>{
           let errores ={}
-
+          
           if(!valores.nombre){
 						errores.nombre = 'Por favor ingresa un nombre'
 					} else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)){
 						errores.nombre = 'El nombre solo puede contener letras y espacios'
 					}
 
-          if(!valores.email){
-						errores.email = 'Por favor ingresa un correo electronico'
-					} else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.email)){
-						errores.email = 'Ingrese un correo valido.'
+          if(!valores.mail){
+						errores.mail = 'Por favor ingresa un correo electronico'
+					} else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.mail)){
+						errores.mail = 'Ingrese un correo valido.'
 					}
 
           if(!valores.telefono){
@@ -113,17 +85,25 @@ export default class register extends Component{
          }}
          
          onSubmit={(valores, {resetForm}) => {
+          postApi(valores)
 					resetForm();
-					console.log('Formulario enviado');
-
+          cambiarFormularioEnviado(true);
+					setTimeout(() => cambiarFormularioEnviado(false), 5000);
 
 				}}
 
 
          >
            {({values, errors, handleSubmit, handleChange, handleBlur})=>(
-
+             <>
+             {formularioEnviado && <>
+              {window.scrollTo(0, 0)}
+              <div className="container-alert">
+             <Alert className="alert" variant="success">Cuenta creada con exito</Alert>
+             </div>
+             </>}
           <div className="Form-Conteiner">
+            
             <Form onSubmit={handleSubmit}>
               <h1 className="Titulo-H1"> Crear cuenta</h1>
               
@@ -147,15 +127,15 @@ export default class register extends Component{
                 <Form.Label>Email</Form.Label>
                 <Form.Control 
                 size="md" 
-                name="email" 
+                name="mail" 
                 type="text" 
                 placeholder="Ej: pintball004@gmail.com" 
                 //onChange={event => this.valueToState(event)}
                 onChange={handleChange}
-                value={values.email}
+                value={values.mail}
                 onBlur={handleBlur}
                 />
-                <ErrorMessage name="email" component={() => (<div className="error">{errors.email}</div>)} />
+                <ErrorMessage name="mail" component={() => (<div className="error">{errors.mail}</div>)} />
               </Form.Group>
               
 
@@ -192,7 +172,8 @@ export default class register extends Component{
                 <Form.Control 
                 name="genero" 
                 as="select"  
-                onChange={event => this.valueToState(event)}
+                onChange={handleChange}
+                value={values.genero}
                 onBlur={handleBlur}
                 >
                   <option>Masculino</option>
@@ -233,7 +214,7 @@ export default class register extends Component{
               variant="dark" 
               type="submit"
               >
-                Registrarse
+                Cuenta Creada
               </Button>
             </Form.Text>
             
@@ -246,9 +227,11 @@ export default class register extends Component{
 
             </Form>
           </div> 
+          </>
           )}
+
           </Formik>
         </>
     );
 }
-}
+
