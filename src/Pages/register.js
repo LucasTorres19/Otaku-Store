@@ -1,15 +1,16 @@
 import React ,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Form,Button,Alert} from  'react-bootstrap';
-import {Link} from 'wouter'
+import { Form , Button , Alert } from  'react-bootstrap';
+import { Link } from 'wouter'
 import './../assets/scss/app.scss';
 import './../assets/Css/register.css'
-import { Formik, ErrorMessage  } from 'formik';
+import { Formik , ErrorMessage  } from 'formik';
 //Components
 import Header from '../components/header.js';
 
 
 export default function Register() {
+
 const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 function postApi(datos){
     const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
@@ -47,29 +48,29 @@ function postApi(datos){
 
          validate={(valores)=>{
           let errores ={}
-          
+          //Validacion del campo nombre
           if(!valores.nombre){
 						errores.nombre = 'Por favor ingresa un nombre'
 					} else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)){
 						errores.nombre = 'El nombre solo puede contener letras y espacios'
 					}
-
+          //Validacion del campo mail
           if(!valores.mail){
 						errores.mail = 'Por favor ingresa un correo electronico'
 					} else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.mail)){
 						errores.mail = 'Ingrese un correo valido.'
 					}
-
+           //Validacion del campo telefono
           if(!valores.telefono){
             errores.telefono = 'Por favor ingrese un telefono'
           }else if(!/^\+[1-9]{1}[0-9]{3,14}$/.test(valores.telefono)){
             errores.telefono= 'Ingrese un telefono valido'
           }
-
+           //Validacion del campo dir
           if(!valores.dir){
             errores.dir ='Por favor ingrese una direccion'
           }
-
+           //Validacion del campo contraseña
           if(!valores.contraseña){
             errores.contraseña = 'Por favor ingrese una contraseña'
           }else if (valores.contraseña.length < 4){
@@ -81,14 +82,15 @@ function postApi(datos){
           }else if(valores.contraseñaConfirm !== valores.contraseña){
             errores.contraseñaConfirm = 'Vuelva a poner la misma contraseña'
           }
+
           return errores
          }}
          
          onSubmit={(valores, {resetForm}) => {
           postApi(valores)
-					resetForm();
-          cambiarFormularioEnviado(true);
-					setTimeout(() => cambiarFormularioEnviado(false), 5000);
+					resetForm()
+          cambiarFormularioEnviado(true)
+					setTimeout(() => cambiarFormularioEnviado(false), 5000)
 
 				}}
 
@@ -140,7 +142,7 @@ function postApi(datos){
               
 
               <Form.Group controlId="Telefono">
-                <Form.Label>Telefono (opcional)</Form.Label>
+                <Form.Label>Telefono </Form.Label>
                 <Form.Control 
                 name="telefono" 
                 size="md" 
@@ -214,7 +216,7 @@ function postApi(datos){
               variant="dark" 
               type="submit"
               >
-                Cuenta Creada
+                Crear Cuenta
               </Button>
             </Form.Text>
             
