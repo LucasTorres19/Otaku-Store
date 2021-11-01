@@ -35,6 +35,9 @@ return (
       <Route path="/productos/:type">
       {(params) => <ProductsList type={params.type} cat="null"/>}
       </Route>
+      <Route path="/search/:nombre">
+        {(params)=> <ProductsList type="null" cat="null" nombre={params.nombre} />}
+      </Route>
      <Route >
        <Notfound/>
      </Route>

@@ -14,12 +14,14 @@ export default class list extends Component{
         }
         this.createCards = this.createCards.bind(this)
     }
-
+    componentDidUpdate(){
+      this.createCards(this.props.type,this.props.cat,this.props.title)
+    }
     componentDidMount(){
-        this.createCards(this.props.type,this.props.cat)
+        this.createCards(this.props.type,this.props.cat,this.props.title)
     }
 
-    async createCards(filter,filtercat){
+    async createCards(filter,filtercat,title){
   
         const APIURL='https://otakuapi.herokuapp.com/api/productos';
         
@@ -56,6 +58,15 @@ export default class list extends Component{
               }
     
             }
+            if(filtercat==="null" && filter==="null"){
+
+              if(productos.title.toLowerCase().includes(title.toLowerCase())){
+                filterArray[i] = productos
+                i++
+              }
+
+
+            }
     
             return undefined
         })                  
@@ -66,8 +77,6 @@ export default class list extends Component{
         })
       
       }
-
-
 
     render(){        
         
@@ -88,10 +97,11 @@ export default class list extends Component{
                 {PRODUCTOS}
             </div>
         </>
-        )}else {return(
-          <div className="notfound-container">
-            <h1 className="notfound-container__h1">0 productos encontrados D:</h1>
-          </div>
+        )}else {
+          return(
+                <div className="notfound-container">
+                  <h1 className="notfound-container__h1">0 productos encontrados D:</h1>
+                </div>
           )}
     }
     

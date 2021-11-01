@@ -27,11 +27,13 @@
     flex-direction: row-reverse !important;
   }
 
-
-  .search{
+.search{
     align-self: center;
-    position:absolute;
+    position:absolute !important;
     padding-right:8px;
+  }
+.search:hover{
+    cursor: pointer;
   }
 
 

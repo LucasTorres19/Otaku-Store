@@ -1,14 +1,22 @@
-import React,{Component} from 'react';
+import React,{useState} from 'react';
 import {Form, Dropdown} from  'react-bootstrap';
-import {Link} from 'wouter';
+import { Link, useLocation } from 'wouter';
 import "./../assets/Css/header.css";
 
-export default class header extends Component{
+export default function Header(props) {
 
-    render(){
+    const [keyword,Setkeyword] = useState('')
+    const [location, setLocation] = useLocation();
 
+   async function handleKeyDown(e){
+    if(e.key === 'Enter'){
+    setLocation(`/search/${keyword}`)
+        
+    }
+        
+    }
         return(
-
+            
             <React.Fragment>
                 <div className="header-conteiner" id='header'>
                     
@@ -16,13 +24,15 @@ export default class header extends Component{
                         <img className="mqm-icon" id='icon' src="https://i.imgur.com/y9rAoTS.png" alt="icon"/>
                     </Link>
                     
-                    {this.props.input?
+                    {props.input?
                         
                         <>
                        
                         <div className="Buscador">
-                            <Form.Control type="text"  placeholder="Buscar..." size='lg' />  
-                            <img src="https://i.imgur.com/vH1IoBC.png" className="search" alt="icon"/>
+                            <Form.Control type="text"  placeholder="Buscar..." size='lg' onChange={(e)=>Setkeyword(e.target.value) } onKeyDown={(e) => handleKeyDown(e)} />  
+                            <a className="search" href={`/search/${keyword}`}>
+                            <img src="https://i.imgur.com/vH1IoBC.png" alt="icon"/>
+                            </a>
                         </div>
                        
                         <div className="container-icons">
@@ -48,8 +58,7 @@ export default class header extends Component{
                                
                         </div>
                        
-                        </>
-                        
+                        </>               
                         :
                         <></>
                         }  
@@ -57,5 +66,5 @@ export default class header extends Component{
                 </div>
             </React.Fragment>
         )
-    }
+    
 }
