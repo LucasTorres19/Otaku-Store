@@ -9,8 +9,9 @@ export default function Header(props) {
     const [location, setLocation] = useLocation();
 
    async function handleKeyDown(e){
-    if(e.key === 'Enter'){
+    if(e.key === 'Enter' && e.target.value!==""){
     setLocation(`/search/${keyword}`)
+   console.log(location)
         
     }
         
@@ -30,7 +31,7 @@ export default function Header(props) {
                        
                         <div className="Buscador">
                             <Form.Control type="text"  placeholder="Buscar..." size='lg' onChange={(e)=>Setkeyword(e.target.value) } onKeyDown={(e) => handleKeyDown(e)} />  
-                            <a className="search" href={`/search/${keyword}`}>
+                            <a className="search" href={keyword!==''?`/search/${keyword}`:''}>
                             <img src="https://i.imgur.com/vH1IoBC.png" alt="icon"/>
                             </a>
                         </div>

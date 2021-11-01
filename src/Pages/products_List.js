@@ -1,4 +1,4 @@
-import React, {useEffect}from 'react'
+import React from 'react'
 import Header from '../components/header.js';
 import Footer from "../components/footer.js";
 import Nav from "../components/nav.js";
