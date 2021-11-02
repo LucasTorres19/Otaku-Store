@@ -2,10 +2,11 @@ import React,{ useEffect,useState  } from 'react';
 import Header from '../components/header.js';
 import Footer from "../components/footer.js";
 import Nav from "../components/nav.js";
-import {Button} from  'react-bootstrap';
+import {Button,Spinner} from  'react-bootstrap';
 import CarruselCartas from "../components/card_carrusel.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/Css/producto.css';
+import Api_get from '../services/Api_Get.js';
 
 export default function Producto (props){
     const [ producto , Setproductos] = useState([''])
@@ -15,16 +16,8 @@ export default function Producto (props){
     }, [])
 
     async function SearchProduct(){
-    
-    const id = props.id
 
-    const url = "https://otakuapi.herokuapp.com/api/productos/" + id
-    
-    const proxyurl = "https://gentle-sands-04799.herokuapp.com/";
-
-    const query = await fetch(proxyurl + url)
-    
-    const data = await query.json()
+    const data = await Api_get("https://otakuapi.herokuapp.com/api/productos/" + props.id)
     
     Setproductos({data})
     Setloading(true)
@@ -65,7 +58,20 @@ export default function Producto (props){
                 <CarruselCartas title={"Otros " + producto.data.cat } type={producto.data.type} cat={producto.data.cat} />
                 </>
                 :
-                <></>
+                <>
+                <div className="conteiner">
+  
+                    
+                    <span className="conteiner-img-spinner">
+                    
+                    
+                    <Spinner animation="grow" variant="danger" className="Spinner-img"/>
+                   
+                    </span>
+
+                    </div>
+              
+                </>
                 }
 
             <Footer />   

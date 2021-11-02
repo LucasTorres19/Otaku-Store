@@ -5,31 +5,14 @@ import { Link } from 'wouter'
 import './../assets/scss/app.scss';
 import './../assets/Css/register.css'
 import { Formik , ErrorMessage  } from 'formik';
-//Components
 import Header from '../components/header.js';
+import sendRegister from "./../services/register.js"
 
 
 export default function Register() {
 
 const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
-function postApi(datos){
-    const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
-
-    fetch(PROXYURL + "https://otakuapi.herokuapp.com/api/usuarios",{
-      method:'POST',
-      headers:{
-        'content-type':'application/json',
-      },body: JSON.stringify(datos)
-    })
-    .then(res => res.json())
-    .then(res =>{
-      if (res.auth){
-
-        alert("usuario Creado.")
-      }
-    })
-  }
-
+const [confirmacion,setconfirmacion] = useState(false)
     return(
         <>
          <Header/>
@@ -87,23 +70,33 @@ function postApi(datos){
          }}
          
          onSubmit={(valores, {resetForm}) => {
-          postApi(valores)
+          setconfirmacion(sendRegister(valores))
+          console.log(confirmacion)
 					resetForm()
           cambiarFormularioEnviado(true)
 					setTimeout(() => cambiarFormularioEnviado(false), 5000)
 
 				}}
 
-
          >
            {({values, errors, handleSubmit, handleChange, handleBlur})=>(
              <>
-             {formularioEnviado && <>
+            
+             {confirmacion?
+              formularioEnviado && <>
               {window.scrollTo(0, 0)}
               <div className="container-alert">
-             <Alert className="alert" variant="success">Cuenta creada con exito</Alert>
+             <Alert className="alert" variant="success">Cuenta creada con exito.</Alert>
              </div>
-             </>}
+             </>
+            :
+              formularioEnviado && <>
+              {window.scrollTo(0, 0)}
+              <div className="container-alert">
+             <Alert className="alert" variant="danger">Error al crear la cuenta.</Alert>
+             </div>
+              </>
+          }
           <div className="Form-Conteiner">
             
             <Form onSubmit={handleSubmit}>

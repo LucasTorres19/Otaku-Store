@@ -1,0 +1,67 @@
+.Card{
+    width: 14rem;
+    display:inline-block;
+    height:312px;
+}
+.Card-link{
+
+    text-Decoration:none;
+}
+.Card-image{
+
+    height:100%;
+    max-Height: 312px;
+    object-Fit: cover;
+    
+}
+
+.Card-Body{
+
+    height:162px;
+    min-Height:162px
+}
+
+.Card-title{
+    text-Align:center;
+    font-Size: 14px;
+    line-Height: 16px;
+    text-Overflow: ellipsis;
+    color: #3f3f3b;
+    z-Index:1;
+    position:absolute;       
+}
+
+.Card-conteiner-text{
+    height:162px;
+    margin-Top:3rem;
+    text-Decoration:none;
+}
+
+.Card-precio{
+
+    text-Align:center;
+    font-Size:20px;
+    color: #333333;
+    font-Weight: 700;
+    margin-Top:15px;
+    text-Decoration:none
+}
+
+.Card-conteiner-bottom{
+    display:flex;
+    justify-Content:space-evenly;
+    position:relative;
+    text-Decoration:none
+}
+
+.Card-body-loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.spinner{
+    margin-top: 60%;
+    width: 50px;
+    height: 50px;
+}

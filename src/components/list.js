@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import Cards from "./card";
 import "../assets/Css/list.css"
+import Api_get from  "./../services/Api_Get.js"
 
 export default class list extends Component{
     
@@ -25,13 +26,7 @@ export default class list extends Component{
 
     async createCards(filter,filtercat,title){
   
-        const APIURL='https://otakuapi.herokuapp.com/api/productos';
-        
-        const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
-    
-        const QUERY = await fetch(PROXYURL + APIURL)
-        
-        const DATA = await QUERY.json()
+        const DATA = await Api_get("https://otakuapi.herokuapp.com/api/productos");
         
         let filterArray = []
     

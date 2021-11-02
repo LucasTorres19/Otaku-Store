@@ -1,14 +1,18 @@
 import React, { useState , useEffect} from 'react'
 import Carousel from "react-multi-carousel";
 import Cards from "./card.js";
+import Api_get from  "./../services/Api_Get.js"
 import "./../assets/Css/card_carrusel.css"
 import "react-multi-carousel/lib/styles.css";
 
 export default function Card_carousel (props){
   
   const [productos,setProductos] = useState([])
+
 useEffect(() => {
-  createCards(props.type,props.cat)// eslint-disable-next-line
+
+  createCards(props.type,props.cat)
+// eslint-disable-next-line
 }, [])
   
  function shuffle(array) {
@@ -28,14 +32,8 @@ useEffect(() => {
   }
 
   async function  createCards(filter,filtercat){
-  
-    const APIURL='https://otakuapi.herokuapp.com/api/productos';
-    
-    const PROXYURL = "https://gentle-sands-04799.herokuapp.com/";
-
-    const QUERY = await fetch(PROXYURL + APIURL)
-    
-    const DATA = await QUERY.json()
+   
+    const DATA = await Api_get('https://otakuapi.herokuapp.com/api/productos')
     
     let filterArray = []
 
@@ -89,8 +87,9 @@ useEffect(() => {
        />     
        
       )
-
+       
         return(
+          
             <React.Fragment>
                 <div className="contenedor_title">
                 <h1 className="carousel_title">{props.title}</h1>
@@ -147,5 +146,6 @@ useEffect(() => {
                     
                 </Carousel>                        
             </React.Fragment>
+                  
         )
     }
