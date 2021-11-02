@@ -1,5 +1,5 @@
 import Header from '../components/header.js';
-import React,{Component} from 'react'
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Form,Button} from  'react-bootstrap';
 import {Link} from 'wouter'
@@ -7,9 +7,9 @@ import './../assets/scss/app.scss';
 import './../assets/Css/login.css';
 
 
-export default class Login extends Component{
+export default function Login (){
 
-  render(){
+ 
      
     return(
         <>
@@ -44,4 +44,4 @@ export default class Login extends Component{
         </>
     );
 }
-}
+

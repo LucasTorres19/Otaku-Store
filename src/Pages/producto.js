@@ -1,4 +1,4 @@
-import React,{ Component  } from 'react';
+import React,{ useEffect,useState  } from 'react';
 import Header from '../components/header.js';
 import Footer from "../components/footer.js";
 import Nav from "../components/nav.js";
@@ -7,33 +7,16 @@ import CarruselCartas from "../components/card_carrusel.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/Css/producto.css';
 
-export default class producto extends Component{
+export default function Producto (props){
+    const [ producto , Setproductos] = useState([''])
+    const [loading,Setloading] = useState(false)
+    useEffect(() => {
+        SearchProduct()// eslint-disable-next-line
+    }, [])
 
-constructor(props){
-        super(props);
-        
-        this.state = {
-            img:"",
-            titulo:"",
-            desc:"",
-            precio:"",
-            type:"",
-            cat: "",
-            car: false
-        }
-        
-        this.SearchProduct = this.SearchProduct.bind(this)
-        
-    }
-
-    componentDidMount() {
-        this.SearchProduct()
-        
-    }
+    async function SearchProduct(){
     
-    async SearchProduct(){
-    
-    const id = this.props.id
+    const id = props.id
 
     const url = "https://otakuapi.herokuapp.com/api/productos/" + id
     
@@ -43,40 +26,31 @@ constructor(props){
     
     const data = await query.json()
     
-    this.setState({
-        img:data.img,
-        titulo:data.title,
-        desc:data.desc,
-        precio:data.precio,
-        type:data.type,
-        cat:data.cat,
-        car:true
-    })
+    Setproductos({data})
+    Setloading(true)
+  
     
 }
-
-    render(){
-
         return(
-        <>
+        <>  
             <Header input="True"/>
                 <Nav/>
-                
+                {loading?<>
                 <div className="conteiner">
 
                     <div className="conteiner-img">
                            
-                        <img src={this.state.img} alt={this.state.titulo} className="Image"/>
+                        <img src={producto.data.img} alt={producto.data.title} className="Image"/>
 
                     </div>
 
                     <div className="conteiner-desc">
-                        <p className="ruta">{"Inicio>"+ this.state.type+">"+this.state.cat+">"+this.state.titulo}</p>
-                        <h1>{this.state.titulo}</h1>
-                        <h2><b>{"$"+ this.state.precio+".00"}</b></h2>
-                        <p className="cuotas"><b>18</b> Cuotas de <b>${(this.state.precio/18).toFixed(2)}</b> </p>
+                        <p className="ruta">{"Inicio>"+ producto.data.type+">"+producto.data.cat+">"+producto.data.title}</p>
+                        <h1>{producto.data.title}</h1>
+                        <h2><b>{"$"+ producto.data.precio+".00"}</b></h2>
+                        <p className="cuotas"><b>18</b> Cuotas de <b>${(producto.data.precio/18).toFixed(2)}</b> </p>
                         <p className="letraspequeñas">Ver mas detalles</p>
-                        <h3>{this.state.desc}</h3>
+                        <h3>{producto.data.desc}</h3>
 
                         <div className="conteiner-bottons">
                         
@@ -87,8 +61,9 @@ constructor(props){
                     </div>
                 </div>
                 
-                {this.state.car?
-                <CarruselCartas title={"Otros " + this.state.cat } type={this.state.type} cat={this.state.cat} />
+
+                <CarruselCartas title={"Otros " + producto.data.cat } type={producto.data.type} cat={producto.data.cat} />
+                </>
                 :
                 <></>
                 }
@@ -98,4 +73,4 @@ constructor(props){
         )
     }
 
-}
+

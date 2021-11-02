@@ -1,4 +1,4 @@
-import React,{ Component } from 'react'
+import React from 'react'
 import Header from '../components/header.js';
 import Footer from "../components/footer.js";
 import Nav from "../components/nav.js";
@@ -9,9 +9,9 @@ import './../assets/scss/app.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/Css/home.css'
 
-export default class home extends Component{
+export default function Home (){
 
-    render(){
+    
         return(
         <>
             <Header input="True"/>
@@ -32,4 +32,3 @@ export default class home extends Component{
         )
     }
 
-}

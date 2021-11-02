@@ -1,7 +1,7 @@
 import React from "react";
 import Header from '../components/header.js';
 import '../assets/Css/404.css'
-export default function notfound (){
+export default function Notfound (){
 
     return <>
         <Header/>
