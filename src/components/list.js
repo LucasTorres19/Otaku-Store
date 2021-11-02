@@ -12,8 +12,10 @@ export default class list extends Component{
           productos: []
         
         }
-        this.createCards = this.createCards.bind(this)
-    }
+
+    this.createCards = this.createCards.bind(this)
+    
+  }
     componentDidUpdate(){
       this.createCards(this.props.type,this.props.cat,this.props.title)
     }
@@ -83,7 +85,13 @@ export default class list extends Component{
         const PRODUCTOS = this.state.productos.map(producto =>{
             return(
             <div className='Cards' key={Math.random(0,100)}>
-                <Cards  key={producto._id} id={producto._id} titulo={producto.title} precio={producto.precio} link={producto.img} />       
+                <Cards  
+                key={producto._id} 
+                id={producto._id} 
+                titulo={producto.title} 
+                precio={producto.precio} 
+                link={producto.img} 
+                />       
             </div>
             )  
         })

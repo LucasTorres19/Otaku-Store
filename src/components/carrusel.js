@@ -1,12 +1,9 @@
-import React,{Component} from "react";
+import React from "react";
 import {Carousel} from  'react-bootstrap';
 import "./../assets/Css/carousel.css";
 
-export default class carrusel extends Component{
+export default function Carrusel (){
    
-
-    render(){
-    
     return(
             
         <React.Fragment>
@@ -64,4 +61,3 @@ export default class carrusel extends Component{
 
     }
    
-}

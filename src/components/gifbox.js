@@ -1,14 +1,11 @@
-import React,{Component} from "react";
+import React from "react";
 
-export default class gifbox extends Component{
-
-    render(){
-        
+export default function Gifbox (props){
         const style={
 
             h1:{
                 fontFamily: "Nunito Sans, sans-serif",
-                backgroundImage:`url(${this.props.gif})`,
+                backgroundImage:`url(${props.gif})`,
                 height:"200px",
                 width:"20rem",
                 color:"white",
@@ -30,9 +27,7 @@ export default class gifbox extends Component{
 
         return(
             <>
-                <h1 style={style.h1}><a style={style.a} href={`/productos/${this.props.title}`}>{this.props.title}</a></h1>
+                <h1 style={style.h1}><a style={style.a} href={`/productos/${props.title}`}>{props.title}</a></h1>
             </>
         )
     }
-
-}

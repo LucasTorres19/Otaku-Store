@@ -1,9 +1,8 @@
-import React ,{Component} from "react";
+import React  from "react";
 import "./../assets/Css/footer.css"
 import { FaInstagram , FaGithub , FaSteam , FaLinkedin  } from 'react-icons/fa';
-export default class footer extends Component{
 
-render(){
+export default function Footer(){
     
    return(
        <>
@@ -44,5 +43,4 @@ render(){
         </footer>
      </>
    )
-}
 }

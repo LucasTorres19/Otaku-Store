@@ -1,11 +1,10 @@
-import React,{ Component } from "react";
+import React from "react";
 import { Card,Button } from  'react-bootstrap';
 
-export default class card extends Component{
-
-render(){
+export default function Cards(props){
      
     const style={
+
         precio:{
             textAlign:"center",
             fontSize:"20px",
@@ -48,22 +47,23 @@ render(){
         }
     
     return(
+
     <React.Fragment>
         
         <Card style={{ width: '14rem',display:"inline-block",height:"312px"}} >
-        <a style={style.a} href={`/${"producto/"+ this.props.id}`}>
-        <Card.Img variant="top" style={style.image} src={this.props.link} /> 
+        <a style={style.a} href={`/${"producto/"+ props.id}`}>
+        <Card.Img variant="top" style={style.image} src={props.link} /> 
         </a>    
         <Card.Body style={{height:"162px",minHeight:"162px"}}>
-        <a style={style.a} href={`/${"producto/"+ this.props.id}`}>
-            <Card.Text  style={style.titulo}>{this.props.titulo}</Card.Text>
+        <a style={style.a} href={`/${"producto/"+ props.id}`}>
+            <Card.Text  style={style.titulo}>{props.titulo}</Card.Text>
         </a>
             <div style={style.body}>
-            <Card.Title  style={style.precio}> {"$" + this.props.precio}</Card.Title>
+            <Card.Title  style={style.precio}> {"$" + props.precio}</Card.Title>
             <div style={style.botones}>
 
                 <Button variant="primary">Comprar</Button>
-                <a style={style.a} href={`/${"producto/"+ this.props.id}`}>
+                <a style={style.a} href={`/${"producto/"+ props.id}`}>
                     <Button variant="dark"><img src="https://i.imgur.com/7nLbIK4.png" alt="ver" />Ver</Button>
                 </a>
             </div>
@@ -76,4 +76,3 @@ render(){
     </React.Fragment>
           )
    }
-}
