@@ -1,30 +1,18 @@
-import React,{Component} from "react";
+import React,{useState,useEffect} from "react";
 import Cards from "./card";
 import "../assets/Css/list.css"
 import Api_get from  "./../services/Api_Get.js"
+import Spinner from "./spinner";
 
-export default class list extends Component{
+export default function List(props) {
+    const [producto,setProducto] = useState([])
+    const [loading,setLoading] = useState(true)
+    useEffect(() => {
+      createCards(props.type,props.cat,props.title)
+    },)
     
-    constructor(props){
-        super(props);
-        
-        this.state = {
-        
-          productos: []
-        
-        }
 
-    this.createCards = this.createCards.bind(this)
-    
-  }
-    componentDidUpdate(){
-      this.createCards(this.props.type,this.props.cat,this.props.title)
-    }
-    componentDidMount(){
-        this.createCards(this.props.type,this.props.cat,this.props.title)
-    }
-
-    async createCards(filter,filtercat,title){
+    async  function createCards(filter,filtercat,title){
   
         const DATA = await Api_get("https://otakuapi.herokuapp.com/api/productos");
         
@@ -67,17 +55,13 @@ export default class list extends Component{
     
             return undefined
         })                  
-                           
-        
-        this.setState({
-          productos : filterArray
-        })
-      
+        setLoading(false)               
+        setProducto(filterArray)
+       
       }
 
-    render(){        
-        
-        const PRODUCTOS = this.state.productos.map(producto =>{
+ 
+        const PRODUCTOS = producto.map(producto =>{
             return(
             <div className='Cards' key={Math.random(0,100)}>
                 <Cards  
@@ -90,22 +74,20 @@ export default class list extends Component{
             </div>
             )  
         })
-        if (PRODUCTOS.length !== 0){
         return(
-        <>
-         
-            <div className="List-Conteiner">
-              
-                
-                {PRODUCTOS}
-            </div>
-        </>
-        )}else {
-          return(
-                <div className="notfound-container">
-                  <h1 className="notfound-container__h1">0 productos encontrados D:</h1>
-                </div>
-          )}
+        loading?
+          <Spinner/>
+        :
+        PRODUCTOS.length !== 0?
+          <div className="List-Conteiner">
+              {PRODUCTOS}
+          </div>  
+            
+        :
+          <div className="notfound-container">
+            <h1 className="notfound-container__h1">0 productos encontrados D:</h1>
+           </div>
+        )
     }
     
-}
+

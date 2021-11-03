@@ -1,8 +1,9 @@
 import React,{ useEffect,useState  } from 'react';
+import  SpinnerLoad  from '../components/spinner.js';
 import Header from '../components/header.js';
 import Footer from "../components/footer.js";
 import Nav from "../components/nav.js";
-import {Button,Spinner} from  'react-bootstrap';
+import {Button} from  'react-bootstrap';
 import CarruselCartas from "../components/card_carrusel.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../assets/Css/producto.css';
@@ -58,20 +59,7 @@ export default function Producto (props){
                 <CarruselCartas title={"Otros " + producto.data.cat } type={producto.data.type} cat={producto.data.cat} />
                 </>
                 :
-                <>
-                <div className="conteiner">
-  
-                    
-                    <span className="conteiner-img-spinner">
-                    
-                    
-                    <Spinner animation="grow" variant="danger" className="Spinner-img"/>
-                   
-                    </span>
-
-                    </div>
-              
-                </>
+                     <SpinnerLoad />
                 }
 
             <Footer />   

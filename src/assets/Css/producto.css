@@ -69,21 +69,7 @@ h3{
     object-fit: cover;
 }
 
-.conteiner-img-spinner{
 
-    height: 100%;
-    width: 100%;    
-    display: flex;
-    margin: 20%;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.Spinner-img{
-    margin: 10%;
-    width: 200px;
-    height: 200px;
-}
 
 @media screen and (max-width: 800px)  and (min-width : 700px){
         
