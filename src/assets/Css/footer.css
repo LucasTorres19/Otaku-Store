@@ -12,6 +12,7 @@
       }
       
     .h1{
+        color:white;
         margin-top:5px;
         font-size: 0.7em;
       }
@@ -21,6 +22,20 @@
         margin-bottom:14px;
         margin-right:7px;
         margin-left:5px;
+      }
+    .divsocial{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        }
+    
+    .divsocial h1{
+
+        color:white;
+        margin-top:1em;
+        margin-bottom:5px;
+        font-size: 0.8em;
       }
     .div{
         width:100%;

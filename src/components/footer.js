@@ -1,4 +1,5 @@
 import React  from "react";
+import { Link } from "wouter";
 import "./../assets/Css/footer.css"
 import { FaInstagram , FaGithub , FaSteam , FaLinkedin  } from 'react-icons/fa';
 
@@ -11,6 +12,16 @@ export default function Footer(){
               <div className="divlogo">
                 <img className="logo"src="https://www.eest5lanus.edu.ar/imgs/logo1.png" alt="Kennedy"/>       
                 <h5 className="division">7°4</h5>
+              </div>
+              <div className="divsocial">
+               <Link href=""> <h1>Aviso de privacidad</h1> </Link>
+               <Link href=""> <h1>Contacto</h1> </Link>
+               <Link href=""> <h1>Sobre nosotros</h1> </Link>
+              </div>
+              <div className="divsocial">
+                <Link href=""> <h1>Ayuda</h1> </Link>
+                <Link href=""> <h1>Preguntas frecuentes</h1> </Link>
+                <Link href=""> <h1>Términos y condiciones</h1> </Link>
               </div>
               <div className="copy">
 
