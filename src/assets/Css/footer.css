@@ -23,11 +23,23 @@
         margin-right:7px;
         margin-left:5px;
       }
+    .divlinks{
+        border-radius: 20px;
+        width: 22em;
+        height: auto;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        background-color: #1d1d1b;
+      }
     .divsocial{
+        height: 10em;
+        width: 20em;
         display:flex;
         flex-direction:column;
         justify-content:space-around;
         align-items:center;
+        
         }
     
     .divsocial h1{
@@ -35,7 +47,8 @@
         color:white;
         margin-top:1em;
         margin-bottom:5px;
-        font-size: 0.8em;
+        font-size: 0.9em;
+        
       }
     .div{
         width:100%;
@@ -96,7 +109,7 @@
       padding-bottom: 5px;
     }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 815px) {
         
         .footer{
           display:flex;
