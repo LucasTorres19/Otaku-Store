@@ -1,5 +1,6 @@
     .footer{
         display:flex;
+        flex-direction: row;
         bottom: 0;
         width: 100%;
         text-align:center;
@@ -10,7 +11,15 @@
         font-family:Arial;
         height:15rem; 
       }
-      
+    
+    .conteiner-left{
+      background-color: #1d1d1b;
+      display:flex;
+      width: 50%;
+      border-radius: 20px;
+      justify-content: space-around;
+    }
+
     .h1{
         color:white;
         margin-top:5px;
@@ -23,15 +32,7 @@
         margin-right:7px;
         margin-left:5px;
       }
-    .divlinks{
-        border-radius: 20px;
-        width: 22em;
-        height: auto;
-        display:flex;
-        flex-direction:row;
-        justify-content:space-between;
-        background-color: #1d1d1b;
-      }
+  
     .divsocial{
         height: 10em;
         width: 20em;
@@ -47,24 +48,24 @@
         color:white;
         margin-top:1em;
         margin-bottom:5px;
-        font-size: 0.9em;
+        font-size: 0.8em;
         
       }
-    .div{
+    .conteiner{
+        margin: 0;
         width:100%;
         align-items:center;
         display:flex;
-        justify-content:space-between;
-        margin-right:20px; 
-        margin-left:20px;
+        justify-content: space-around;
       }
     .divlogo{
         display:flex;
         align-items:center;
-        margin-left:-10px;
+        margin-left:10px;
+        margin-right: 20%;
       }
       
-    .copy{
+    .conteiner-right{
         display:flex;
         align-items:center;
         margin-top:10px;
@@ -108,7 +109,6 @@
       padding-left: 5px;
       padding-bottom: 5px;
     }
-
       @media screen and (max-width: 815px) {
         
         .footer{
@@ -125,7 +125,8 @@
           font-family:Arial;
           height:auto; 
         }
-        .div{
+        .conteiner{
+          margin: 0;
           width:100%;
           align-items:center;
           display:flex;
@@ -133,6 +134,22 @@
           justify-content: center;
           margin-right:20px; 
           margin-left:20px;
+        }
+        .conteiner-left{
+          width: 20rem;
+          margin-top: 10px;	
+          background-color: #1d1d1b;
+          display:flex;
+          border-radius: 20px;          
+          align-items: center;
+          flex-direction: column;
+        }
+        .logo{
+          width:100px;
+          height:100px;
+          margin-bottom:14px;
+          margin-right:-30px;
+          margin-left:5px;
         }
       } 
     
