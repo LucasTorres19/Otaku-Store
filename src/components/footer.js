@@ -48,6 +48,13 @@ export default function Footer(){
                     <a href="https://www.linkedin.com/in/carlos-brandan-dev/"><FaLinkedin/></a>
                   </div>
 
+                  <div className="container-user">
+                    <p className="p">Ironi Alejo</p>
+                    <a href="https://www.instagram.com/ale_ironi_/"><FaInstagram/></a>
+          
+                  </div>
+
+
                   <div className="conteiner-copyright">
                   <p className="h1">Copyright © 2020-2021 MQM S.R.L</p>
                   <a href="https://github.com/LucasTorres19/Otaku-Store"><FaGithub/></a> 
