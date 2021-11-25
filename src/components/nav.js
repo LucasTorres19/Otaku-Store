@@ -8,7 +8,7 @@ export default function Nav(){
                         manga:
                         {
                             Fila1:"Manhua",Fila2:"Ecchi",Fila3:"Josei",Fila4:"Novelas Ligeras",Fila5:"Seinen",
-                            Fila6:"Shojo",Fila7:"Shonen",Fila8:"Spokon",Fila9:"Yaoi / BL",Fila10:"Yuri",             
+                            Fila6:"Shojo",Fila7:"Shonen",Fila8:"Spokon",Fila9:"Yaoi - BL",Fila10:"Yuri",             
                         },
                         juegos:
                         {
