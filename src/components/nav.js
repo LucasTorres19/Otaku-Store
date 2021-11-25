@@ -17,7 +17,7 @@ export default function Nav(){
                         },
                         libros:
                         {
-                            Fila1:"Cine",Fila2:"Dibujo",Fila3:"Jovenes Lectores",Fila4:"Artbooks",               
+                            Fila1:"Cine",Fila2:"Dibujo",Fila3:"Jovenes-Lectores",Fila4:"Artbooks",               
                         },
                         merchandising:
                         {
